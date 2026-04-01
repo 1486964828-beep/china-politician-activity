@@ -15,6 +15,8 @@
     "dedup": "tsx scripts/dedup.ts",
     "demo:load": "tsx scripts/demo-load.ts",
     "export:data": "node scripts/export-static-data.js",
+    "sample:track": "tsx scripts/sample-track-live.ts",
+    "sample:track:official": "tsx scripts/sample-track-official.ts",
     "pipeline": "tsx scripts/pipeline.ts"
   },
   "dependencies": {

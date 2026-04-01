@@ -1,26 +1,26 @@
 import { EventType } from "@prisma/client";
 
 import { prisma } from "../prisma";
-import { parseChineseDateHint } from "../utils/dates";
+import { extractDateHint, parseChineseDateHint } from "../utils/dates";
 import { sha1 } from "../utils/hash";
 import { parseJsonArray, stringifyJsonArray } from "../utils/json";
 import { cleanText, extractKeywords, splitSentences, summarize } from "../utils/text";
 
 const EVENT_TYPE_RULES: Array<{ type: EventType; keywords: string[] }> = [
-  { type: "LIANGHUI", keywords: ["代表团", "审议", "政协", "人大", "两会"] },
-  { type: "SAFETY_PRODUCTION", keywords: ["安全生产", "防汛", "消防", "风险排查"] },
-  { type: "MEETING_WITH", keywords: ["会见"] },
-  { type: "FOREIGN_AFFAIRS", keywords: ["外宾", "港澳", "台湾", "外资"] },
-  { type: "MEETING", keywords: ["常委会会议", "常务会议", "会议", "座谈会"] },
+  { type: "MEETING", keywords: ["常委会会议", "常务会议", "专题会议", "调度会", "推进会", "座谈会", "主持研究", "会议"] },
   { type: "RESEARCH", keywords: ["调研", "考察", "走访"] },
-  { type: "INSPECTION", keywords: ["督导", "检查", "巡查"] },
-  { type: "ECONOMIC_WORK", keywords: ["经济运行", "投资", "产业", "营商环境", "外贸"] },
-  { type: "PARTY_BUILDING", keywords: ["党建", "组织工作", "巡视整改"] },
+  { type: "PARTY_BUILDING", keywords: ["学习教育", "读书班", "教育整治", "党建", "组织工作", "巡视整改"] },
+  { type: "MEETING_WITH", keywords: ["会见"] },
+  { type: "ECONOMIC_WORK", keywords: ["经济运行", "投资", "产业", "营商环境", "外贸", "经贸", "招商", "创投", "签约", "签署协议"] },
+  { type: "SAFETY_PRODUCTION", keywords: ["安全生产", "防汛", "消防", "风险排查"] },
+  { type: "FOREIGN_AFFAIRS", keywords: ["外宾", "港澳", "台湾", "外资", "驻华大使", "国际交流"] },
+  { type: "ATTENDANCE", keywords: ["出席", "参加", "致辞", "开幕"] },
   { type: "SPEECH", keywords: ["讲话", "批示", "致辞"] },
-  { type: "ATTENDANCE", keywords: ["出席", "参加"] }
+  { type: "INSPECTION", keywords: ["督导", "检查", "巡查"] },
+  { type: "LIANGHUI", keywords: ["全国两会", "两会", "代表团", "全国人大", "全国政协", "审议政府工作报告"] }
 ];
 
-export async function resolveLeaders(regionId: string, text: string) {
+export async function resolveLeaders(regionId: string, text: string, focusTexts: string[] = [text]) {
   const regionLeaders = await prisma.leader.findMany({
     where: {
       regionId,
@@ -28,10 +28,38 @@ export async function resolveLeaders(regionId: string, text: string) {
     }
   });
 
-  return regionLeaders.filter((leader) => {
+  for (const focusText of focusTexts) {
+    const byNameOrAliasInFocus = regionLeaders.filter((leader) => {
+      const aliases = parseJsonArray(leader.aliasesJson);
+      return [leader.name, ...aliases].some((item) => item && focusText.includes(item));
+    });
+
+    if (byNameOrAliasInFocus.length > 0) {
+      return byNameOrAliasInFocus;
+    }
+  }
+
+  const byNameOrAliasInFullText = regionLeaders.filter((leader) => {
     const aliases = parseJsonArray(leader.aliasesJson);
-    return [leader.name, leader.officialTitle, leader.normalizedTitle, ...aliases].some((item) => item && text.includes(item));
+    return [leader.name, ...aliases].some((item) => item && text.includes(item));
   });
+
+  if (byNameOrAliasInFullText.length > 0) {
+    return byNameOrAliasInFullText;
+  }
+
+  for (const focusText of focusTexts) {
+    const byTitleInFocus = regionLeaders.filter((leader) => {
+      const aliases = parseJsonArray(leader.aliasesJson);
+      return [leader.officialTitle, leader.normalizedTitle, ...aliases].some((item) => item && focusText.includes(item));
+    });
+
+    if (byTitleInFocus.length > 0) {
+      return byTitleInFocus;
+    }
+  }
+
+  return [];
 }
 
 export function classifyEventType(text: string) {
@@ -45,8 +73,53 @@ export function classifyEventType(text: string) {
 }
 
 export function inferLocation(text: string) {
-  const match = text.match(/在([^，。]{2,18})(调研|召开|会见|出席|主持)/);
-  return match?.[1] ?? null;
+  const match = text.match(/在([^，。]{2,24})(调研|考察|督导|检查|会见|出席|召开|举行)/);
+
+  if (!match) {
+    return null;
+  }
+
+  const value = cleanText(match[1]).replace(/时强调$|时指出$|专题$/g, "");
+
+  if (
+    value === "京" ||
+    value.includes("主持") ||
+    value.includes("强调") ||
+    value.includes("召开") ||
+    value.includes("出席") ||
+    value.includes("讲话") ||
+    value.length > 20
+  ) {
+    return null;
+  }
+
+  return value;
+}
+
+function inferEventDate(input: {
+  title: string;
+  rawText: string;
+  publishTime?: Date | null;
+}) {
+  const leadSentences = splitSentences(input.rawText).slice(0, 4).join("。");
+  const leadWindow = cleanText(input.rawText).slice(0, 320);
+  const candidates = [
+    leadSentences,
+    leadWindow,
+    cleanText(`${input.title} ${leadSentences}`),
+    input.title,
+    cleanText(input.rawText).slice(0, 1200)
+  ];
+
+  for (const candidate of candidates) {
+    const explicit = extractDateHint(candidate, input.publishTime);
+
+    if (explicit) {
+      return explicit;
+    }
+  }
+
+  return parseChineseDateHint(cleanText(`${input.title} ${input.rawText}`), input.publishTime);
 }
 
 export function buildNormalizedTitle(input: {
@@ -56,6 +129,43 @@ export function buildNormalizedTitle(input: {
   rawTitle: string;
 }) {
   const leaderText = input.leaders.map((item) => item.name).join("、") || "相关领导";
+  const rawTitle = cleanText(input.rawTitle);
+
+  if (rawTitle.includes("调研") || rawTitle.includes("考察")) {
+    return `${leaderText}${input.locationText ? `在${input.locationText}` : ""}调研`;
+  }
+
+  if (rawTitle.includes("主持召开") && rawTitle.includes("推进会")) {
+    return `${leaderText}主持召开工作推进会`;
+  }
+
+  if (rawTitle.includes("主持召开") && rawTitle.includes("调度会")) {
+    return `${leaderText}主持召开调度会`;
+  }
+
+  if (rawTitle.includes("常委会会议")) {
+    return `${leaderText}主持召开省委常委会会议`;
+  }
+
+  if (rawTitle.includes("常务会议")) {
+    return `${leaderText}主持召开省政府常务会议`;
+  }
+
+  if (rawTitle.includes("推进会")) {
+    return `${leaderText}出席工作推进会`;
+  }
+
+  if (rawTitle.includes("读书班")) {
+    return `${leaderText}参加学习教育读书班`;
+  }
+
+  if (rawTitle.includes("签署") || rawTitle.includes("签约")) {
+    return `${leaderText}见证合作签约活动`;
+  }
+
+  if (rawTitle.includes("主持研究")) {
+    return `${leaderText}主持研究专项工作`;
+  }
 
   switch (input.eventType) {
     case "MEETING":
@@ -128,11 +238,17 @@ export async function extractEventDraft(rawArticleId: string) {
   }
 
   const fullText = cleanText(`${article.title} ${article.rawText}`);
-  const leaders = await resolveLeaders(region.id, fullText);
+  const titleText = cleanText(article.title);
+  const leadText = cleanText(`${article.title} ${splitSentences(article.rawText).slice(0, 4).join("。")}`);
+  const leaders = await resolveLeaders(region.id, fullText, [titleText, leadText]);
   const publishTime = article.publishTime ?? undefined;
-  const eventDate = parseChineseDateHint(fullText, publishTime);
-  const eventType = classifyEventType(fullText);
-  const locationText = inferLocation(fullText);
+  const eventDate = inferEventDate({
+    title: article.title,
+    rawText: article.rawText,
+    publishTime
+  });
+  const eventType = classifyEventType(leadText);
+  const locationText = inferLocation(leadText);
   const keywordList = extractKeywords(`${article.title} ${summarize(article.rawText, 2)}`);
   const normalizedTitle = buildNormalizedTitle({
     leaders,

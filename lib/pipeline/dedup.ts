@@ -38,6 +38,9 @@ function overlap<T>(left: T[], right: T[]) {
 }
 
 function computeMatchScore(a: Awaited<ReturnType<typeof loadEventDrafts>>[number], b: Awaited<ReturnType<typeof loadEventDrafts>>[number]) {
+  const titleA = a.sources.find((item) => item.isPrimary)?.rawArticle.title ?? a.normalizedTitle;
+  const titleB = b.sources.find((item) => item.isPrimary)?.rawArticle.title ?? b.normalizedTitle;
+  const keywordSimilarity = jaccardSimilarity(parseJsonArray(a.keywordsJson), parseJsonArray(b.keywordsJson));
   const leaderOverlap = overlap(
     a.leaders.map((item) => item.leader.name),
     b.leaders.map((item) => item.leader.name)
@@ -45,14 +48,27 @@ function computeMatchScore(a: Awaited<ReturnType<typeof loadEventDrafts>>[number
     ? 1
     : 0;
 
-  const titleSimilarity = jaccardSimilarity(tokenize(a.normalizedTitle), tokenize(b.normalizedTitle));
+  const titleSimilarity = jaccardSimilarity(tokenize(titleA), tokenize(titleB));
   const summarySimilarity = jaccardSimilarity(tokenize(a.summary ?? ""), tokenize(b.summary ?? ""));
   const locationSimilarity =
-    a.locationText && b.locationText
-      ? jaccardSimilarity(tokenize(a.locationText), tokenize(b.locationText))
-      : 0.2;
+    a.locationText && b.locationText ? jaccardSimilarity(tokenize(a.locationText), tokenize(b.locationText)) : 0;
 
-  return 0.32 * leaderOverlap + 0.24 * titleSimilarity + 0.22 * summarySimilarity + 0.12 * locationSimilarity + 0.1 * typeSimilarity(a.eventType, b.eventType);
+  if (leaderOverlap === 0) {
+    return 0;
+  }
+
+  if (titleSimilarity < 0.45 && summarySimilarity < 0.4 && keywordSimilarity < 0.4) {
+    return 0;
+  }
+
+  return (
+    0.24 * leaderOverlap +
+    0.26 * titleSimilarity +
+    0.2 * summarySimilarity +
+    0.16 * keywordSimilarity +
+    0.06 * locationSimilarity +
+    0.08 * typeSimilarity(a.eventType, b.eventType)
+  );
 }
 
 async function loadEventDrafts() {
@@ -231,7 +247,7 @@ export async function runDeduplication() {
 
       const score = computeMatchScore(current, candidate);
 
-      if (score >= 0.68) {
+      if (score >= 0.74) {
         consumed.add(candidate.id);
         await mergeEvents(current.id, candidate.id, score);
         mergedCount += 1;

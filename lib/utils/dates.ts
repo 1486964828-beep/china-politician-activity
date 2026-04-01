@@ -1,5 +1,9 @@
 const ONE_DAY = 24 * 60 * 60 * 1000;
 
+function buildUtcDate(year: number, month: number, day: number) {
+  return new Date(Date.UTC(year, month - 1, day));
+}
+
 export function parseMonthInput(month: string) {
   const [yearRaw, monthRaw] = month.split("-");
   const year = Number(yearRaw);
@@ -32,6 +36,20 @@ export function getMonthBounds(month: string) {
   return { start, end };
 }
 
+export function enumerateDateRange(startDate: string, endDate: string) {
+  const start = new Date(`${startDate}T00:00:00.000Z`);
+  const end = new Date(`${endDate}T00:00:00.000Z`);
+  const dates: Date[] = [];
+  const cursor = new Date(start);
+
+  while (cursor <= end) {
+    dates.push(new Date(cursor));
+    cursor.setUTCDate(cursor.getUTCDate() + 1);
+  }
+
+  return dates;
+}
+
 export function formatIsoDate(date: Date | string) {
   const value = typeof date === "string" ? new Date(date) : date;
   return value.toISOString().slice(0, 10);
@@ -49,19 +67,47 @@ export function withinDays(a: Date, b: Date, days: number) {
   return Math.abs(a.getTime() - b.getTime()) <= days * ONE_DAY;
 }
 
-export function parseChineseDateHint(text: string, publishTime?: Date | null) {
+export function extractDateHint(text: string, publishTime?: Date | null) {
+  const isoDateMatch = text.match(/(20\d{2})[-/](\d{1,2})[-/](\d{1,2})/);
+
+  if (isoDateMatch) {
+    const [, year, month, day] = isoDateMatch;
+    return buildUtcDate(Number(year), Number(month), Number(day));
+  }
+
   const fullDateMatch = text.match(/(20\d{2})年(\d{1,2})月(\d{1,2})日/);
 
   if (fullDateMatch) {
     const [, year, month, day] = fullDateMatch;
-    return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)));
+    return buildUtcDate(Number(year), Number(month), Number(day));
+  }
+
+  const monthRangeMatch = text.match(/(\d{1,2})月(\d{1,2})日\s*(?:至|-|—|~)\s*(\d{1,2})日/);
+
+  if (monthRangeMatch && publishTime) {
+    const [, month, day] = monthRangeMatch;
+    return buildUtcDate(publishTime.getUTCFullYear(), Number(month), Number(day));
+  }
+
+  const dayRangeMatch = text.match(/(\d{1,2})日\s*(?:至|-|—|~)\s*(\d{1,2})日/);
+
+  if (dayRangeMatch && publishTime) {
+    const [, day] = dayRangeMatch;
+    return buildUtcDate(publishTime.getUTCFullYear(), publishTime.getUTCMonth() + 1, Number(day));
   }
 
   const monthDayMatch = text.match(/(\d{1,2})月(\d{1,2})日/);
 
   if (monthDayMatch && publishTime) {
     const [, month, day] = monthDayMatch;
-    return new Date(Date.UTC(publishTime.getUTCFullYear(), Number(month) - 1, Number(day)));
+    return buildUtcDate(publishTime.getUTCFullYear(), Number(month), Number(day));
+  }
+
+  const dayOnlyMatch = text.match(/(?:^|[，。；：\s])(\d{1,2})日(?:上午|下午|晚上|晚间|中午|凌晨|清晨)/);
+
+  if (dayOnlyMatch && publishTime) {
+    const [, day] = dayOnlyMatch;
+    return buildUtcDate(publishTime.getUTCFullYear(), publishTime.getUTCMonth() + 1, Number(day));
   }
 
   if (publishTime && /昨日|昨天/.test(text)) {
@@ -70,6 +116,16 @@ export function parseChineseDateHint(text: string, publishTime?: Date | null) {
 
   if (publishTime && /今日|今天/.test(text)) {
     return publishTime;
+  }
+
+  return null;
+}
+
+export function parseChineseDateHint(text: string, publishTime?: Date | null) {
+  const explicit = extractDateHint(text, publishTime);
+
+  if (explicit) {
+    return explicit;
   }
 
   return publishTime ?? new Date();
