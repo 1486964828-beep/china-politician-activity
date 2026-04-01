@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 import { Badge } from "@/components/badge";
-import type { EventListItem } from "@/lib/db/events";
+import type { StaticEvent } from "@/lib/static-data";
 import { credibilityLabels, eventTypeLabels, roleTypeLabels } from "@/lib/utils/labels";
 
-export function EventTable({ events }: { events: EventListItem[] }) {
+export function EventTable({ events }: { events: StaticEvent[] }) {
   if (events.length === 0) {
     return (
       <div className="rounded-3xl border border-dashed border-line bg-white/80 p-8 text-center text-sm text-slate-500">
@@ -31,7 +31,7 @@ export function EventTable({ events }: { events: EventListItem[] }) {
             const primary = event.sources.find((item) => item.isPrimary) ?? event.sources[0];
             return (
               <tr key={event.id} className="border-t border-slate-100 align-top">
-                <td className="px-4 py-4 text-sm text-slate-600">{event.eventDate.toISOString().slice(0, 10)}</td>
+                <td className="px-4 py-4 text-sm text-slate-600">{event.eventDate.slice(0, 10)}</td>
                 <td className="px-4 py-4 text-sm">
                   <div className="font-medium text-ink">{event.region.name}</div>
                   <div className="mt-1 text-xs text-slate-500">{event.locationText ?? "未抽取地点"}</div>
@@ -41,7 +41,7 @@ export function EventTable({ events }: { events: EventListItem[] }) {
                     {event.leaders.map((item) => (
                       <div key={item.id}>
                         <span className="font-medium">{item.leader.name}</span>
-                        <span className="ml-2 text-xs text-slate-500">{roleTypeLabels[item.leader.roleType]}</span>
+                        <span className="ml-2 text-xs text-slate-500">{roleTypeLabels[item.leader.roleType as keyof typeof roleTypeLabels]}</span>
                       </div>
                     ))}
                   </div>
@@ -53,13 +53,13 @@ export function EventTable({ events }: { events: EventListItem[] }) {
                   <p className="mt-2 max-w-xl text-slate-600">{event.summary}</p>
                 </td>
                 <td className="px-4 py-4 text-sm">
-                  <Badge tone="green">{eventTypeLabels[event.eventType]}</Badge>
+                  <Badge tone="green">{eventTypeLabels[event.eventType as keyof typeof eventTypeLabels]}</Badge>
                 </td>
                 <td className="px-4 py-4 text-sm text-slate-700">
                   <div>来源数：{event.sources.length}</div>
                   {primary ? (
                     <div className="mt-2 space-y-1">
-                      <Badge tone="amber">{credibilityLabels[primary.rawArticle.credibilityLevel ?? "D"]}</Badge>
+                      <Badge tone="amber">{credibilityLabels[(primary.rawArticle.credibilityLevel ?? "D") as keyof typeof credibilityLabels]}</Badge>
                       <a href={primary.rawArticle.url} target="_blank" rel="noreferrer" className="block text-xs text-slate-500 underline-offset-4 hover:underline">
                         {primary.rawArticle.title}
                       </a>

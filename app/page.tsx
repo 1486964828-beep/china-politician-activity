@@ -1,34 +1,27 @@
-import { CredibilityLevel, EventType, LeaderRoleType } from "@prisma/client";
+import { Suspense } from "react";
 
-import { EventTable } from "@/components/event-table";
-import { SearchPanel } from "@/components/search-panel";
+import { SearchExperience } from "@/components/search-experience";
 import { StatsPanel } from "@/components/stats-panel";
-import { getFilterOptions, getStats, listEvents } from "@/lib/db/events";
+import { STATIC_EVENTS, STATIC_LEADERS, STATIC_REGIONS } from "@/lib/static-data";
 
-function pickString(value: string | string[] | undefined) {
-  return Array.isArray(value) ? value[0] : value;
-}
+export default function HomePage() {
+  const byRegion = new Map<string, number>();
+  const byType = new Map<string, number>();
 
-export default async function HomePage({
-  searchParams
-}: {
-  searchParams?: Promise<Record<string, string | string[] | undefined>>;
-}) {
-  const params = (await searchParams) ?? {};
-  const filters = {
-    date: pickString(params.date),
-    regionCode: pickString(params.regionCode),
-    leaderName: pickString(params.leaderName),
-    roleType: pickString(params.roleType) as LeaderRoleType | "",
-    eventType: pickString(params.eventType) as EventType | "",
-    sourceLevel: pickString(params.sourceLevel) as CredibilityLevel | ""
+  for (const event of STATIC_EVENTS) {
+    byRegion.set(event.region.name, (byRegion.get(event.region.name) ?? 0) + 1);
+    byType.set(event.eventType, (byType.get(event.eventType) ?? 0) + 1);
+  }
+
+  const stats = {
+    total: STATIC_EVENTS.length,
+    byRegion: Array.from(byRegion.entries())
+      .map(([name, count]) => ({ name, count }))
+      .sort((left, right) => right.count - left.count),
+    byType: Array.from(byType.entries())
+      .map(([type, count]) => ({ type, count }))
+      .sort((left, right) => right.count - left.count)
   };
-
-  const [{ regions, leaders }, stats, events] = await Promise.all([
-    getFilterOptions(),
-    getStats("2026-03"),
-    listEvents(filters)
-  ]);
 
   return (
     <main className="mx-auto flex min-h-screen max-w-7xl flex-col gap-6 px-4 py-8 md:px-8">
@@ -48,8 +41,9 @@ export default async function HomePage({
       </section>
 
       <StatsPanel total={stats.total} byRegion={stats.byRegion} byType={stats.byType} />
-      <SearchPanel regions={regions} leaders={leaders} filters={filters} />
-      <EventTable events={events} />
+      <Suspense fallback={<div className="rounded-3xl border border-line bg-white/90 p-6 shadow-soft text-sm text-slate-500">正在加载查询界面…</div>}>
+        <SearchExperience events={STATIC_EVENTS} regions={STATIC_REGIONS} leaders={STATIC_LEADERS} />
+      </Suspense>
     </main>
   );
 }
