@@ -1,0 +1,239 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum RegionLevel {
+  PROVINCE
+}
+
+enum RegionType {
+  PROVINCE
+  AUTONOMOUS_REGION
+  MUNICIPALITY
+}
+
+enum LeaderRoleType {
+  PARTY_SECRETARY
+  GOVERNOR
+  CHAIRMAN
+  MAYOR
+}
+
+enum SourceType {
+  PARTY
+  GOVERNMENT
+  OFFICIAL_MEDIA
+  CENTRAL_MEDIA
+}
+
+enum CredibilityLevel {
+  A
+  B
+  C
+  D
+}
+
+enum SearchTaskStatus {
+  PENDING
+  COMPLETED
+  FAILED
+}
+
+enum FetchStatus {
+  PENDING
+  FETCHED
+  SKIPPED
+  FAILED
+}
+
+enum ArticleStatus {
+  RAW
+  EXTRACTED
+  IGNORED
+  FAILED
+}
+
+enum EventType {
+  MEETING
+  RESEARCH
+  MEETING_WITH
+  ATTENDANCE
+  SPEECH
+  INSPECTION
+  LIANGHUI
+  ECONOMIC_WORK
+  SAFETY_PRODUCTION
+  PARTY_BUILDING
+  FOREIGN_AFFAIRS
+  OTHER
+}
+
+model Region {
+  id          String      @id @default(cuid())
+  code        String      @unique
+  name        String
+  level       RegionLevel @default(PROVINCE)
+  type        RegionType
+  parentId    String?
+  parent      Region?     @relation("RegionTree", fields: [parentId], references: [id])
+  children    Region[]    @relation("RegionTree")
+  leaders     Leader[]
+  sourceSites SourceSite[]
+  searchTasks SearchTask[]
+  events      Event[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model Leader {
+  id              String         @id @default(cuid())
+  name            String
+  regionId        String
+  region          Region         @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  roleType        LeaderRoleType
+  officialTitle   String
+  normalizedTitle String
+  startDate       DateTime?
+  endDate         DateTime?
+  aliasesJson     String         @default("[]")
+  active          Boolean        @default(true)
+  searchTasks     SearchTask[]
+  eventLeaders    EventLeader[]
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([regionId, active])
+  @@unique([regionId, name, roleType, active])
+}
+
+model SourceSite {
+  id               String           @id @default(cuid())
+  regionId         String
+  region           Region           @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  siteName         String
+  baseDomain       String
+  sourceType       SourceType
+  credibilityLevel CredibilityLevel
+  enabled          Boolean          @default(true)
+  notes            String?
+  candidateUrls    CandidateUrl[]
+  rawArticles      RawArticle[]
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  @@unique([regionId, baseDomain])
+}
+
+model SearchTask {
+  id            String           @id @default(cuid())
+  regionId      String
+  region        Region           @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  searchDate    DateTime
+  leaderId      String?
+  leader        Leader?          @relation(fields: [leaderId], references: [id], onDelete: SetNull)
+  queryText     String
+  engine        String
+  status        SearchTaskStatus @default(PENDING)
+  candidateUrls CandidateUrl[]
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  @@index([searchDate, status])
+}
+
+model CandidateUrl {
+  id                  String      @id @default(cuid())
+  searchTaskId        String
+  searchTask          SearchTask  @relation(fields: [searchTaskId], references: [id], onDelete: Cascade)
+  url                 String
+  title               String?
+  snippet             String?
+  domain              String
+  rank                Int?
+  sourceSiteId        String?
+  sourceSite          SourceSite? @relation(fields: [sourceSiteId], references: [id], onDelete: SetNull)
+  sourceConfidence    Float       @default(0)
+  isOfficialCandidate Boolean     @default(false)
+  discoveredAt        DateTime    @default(now())
+  fetchStatus         FetchStatus @default(PENDING)
+  rawArticles         RawArticle[]
+
+  @@index([domain, isOfficialCandidate])
+  @@unique([searchTaskId, url])
+}
+
+model RawArticle {
+  id               String           @id @default(cuid())
+  candidateUrlId   String?
+  candidateUrl     CandidateUrl?    @relation(fields: [candidateUrlId], references: [id], onDelete: SetNull)
+  sourceSiteId     String?
+  sourceSite       SourceSite?      @relation(fields: [sourceSiteId], references: [id], onDelete: SetNull)
+  url              String           @unique
+  title            String
+  publishTime      DateTime?
+  crawlTime        DateTime         @default(now())
+  rawText          String
+  rawHtml          String?
+  sourceName       String?
+  sourceDomain     String?
+  credibilityLevel CredibilityLevel?
+  checksum         String
+  articleStatus    ArticleStatus    @default(RAW)
+  eventSources     EventSource[]
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  @@index([credibilityLevel, articleStatus])
+}
+
+model Event {
+  id              String      @id @default(cuid())
+  regionId        String
+  region          Region      @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  eventDate       DateTime
+  normalizedTitle String
+  summary         String?
+  eventType       EventType
+  locationText    String?
+  keywordsJson    String      @default("[]")
+  confidenceScore Float       @default(0.5)
+  dedupKey        String
+  leaders         EventLeader[]
+  sources         EventSource[]
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  @@index([regionId, eventDate])
+  @@index([eventType])
+  @@index([dedupKey])
+}
+
+model EventLeader {
+  id          String @id @default(cuid())
+  eventId     String
+  event       Event  @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  leaderId    String
+  leader      Leader @relation(fields: [leaderId], references: [id], onDelete: Cascade)
+  roleInEvent String?
+
+  @@unique([eventId, leaderId])
+}
+
+model EventSource {
+  id               String    @id @default(cuid())
+  eventId          String
+  event            Event     @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  rawArticleId     String
+  rawArticle       RawArticle @relation(fields: [rawArticleId], references: [id], onDelete: Cascade)
+  isPrimary        Boolean   @default(false)
+  matchScore       Float     @default(1)
+  extractionMethod String
+  createdAt        DateTime  @default(now())
+
+  @@unique([eventId, rawArticleId])
+}

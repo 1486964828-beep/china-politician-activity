@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(191, 127, 47, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(25, 69, 51, 0.12), transparent 24%),
+    linear-gradient(180deg, #f9f6f1 0%, #f2f5ed 100%);
+  color: #11253a;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,
+select {
+  outline: none;
+}

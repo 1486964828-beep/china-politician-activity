@@ -1,0 +1,39 @@
+{
+  "name": "province-activity-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:init": "prisma generate && prisma db push",
+    "seed": "tsx prisma/seed.ts",
+    "search:generate": "tsx scripts/search-generate.ts",
+    "candidates:ingest": "tsx scripts/candidates-ingest.ts",
+    "fetch:articles": "tsx scripts/fetch-articles.ts",
+    "extract:events": "tsx scripts/extract-events.ts",
+    "dedup": "tsx scripts/dedup.ts",
+    "demo:load": "tsx scripts/demo-load.ts",
+    "pipeline": "tsx scripts/pipeline.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "cheerio": "^1.0.0",
+    "clsx": "^2.1.1",
+    "next": "^15.2.4",
+    "playwright": "^1.52.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "prisma": "^6.6.0",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
