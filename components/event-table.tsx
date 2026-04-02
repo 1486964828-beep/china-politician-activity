@@ -5,6 +5,14 @@ import type { StaticEvent } from "@/lib/static-data";
 import { credibilityLabels, eventTypeLabels, roleTypeLabels } from "@/lib/utils/labels";
 import { buildDisplaySummary, normalizeSourceTitle } from "@/lib/utils/presentation";
 
+function truncateText(text: string, maxLength = 36) {
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  return `${text.slice(0, maxLength).trim()}...`;
+}
+
 export function EventTable({ events }: { events: StaticEvent[] }) {
   if (events.length === 0) {
     return (
@@ -33,6 +41,7 @@ export function EventTable({ events }: { events: StaticEvent[] }) {
             const primary = event.sources.find((item) => item.isPrimary) ?? event.sources[0];
             const displayTitle = primary ? normalizeSourceTitle(primary.rawArticle.title) : event.normalizedTitle;
             const displaySummary = primary ? buildDisplaySummary(event.summary ?? "", primary.rawArticle.title) : event.summary;
+            const summaryPreview = displaySummary ? truncateText(displaySummary, 42) : "暂无正文摘要";
             return (
               <tr key={event.id} className="border-t border-slate-100 align-top">
                 <td className="px-4 py-4 text-sm text-slate-600">{event.eventDate.slice(0, 10)}</td>
@@ -56,7 +65,17 @@ export function EventTable({ events }: { events: StaticEvent[] }) {
                   </Link>
                 </td>
                 <td className="px-4 py-4 text-sm text-slate-600">
-                  <p className="max-w-xl leading-7">{displaySummary || "暂无正文摘要"}</p>
+                  {displaySummary ? (
+                    <details className="max-w-xl">
+                      <summary className="cursor-pointer list-none text-slate-600 marker:hidden">
+                        <span>{summaryPreview}</span>
+                        <span className="ml-2 text-xs text-pine">展开</span>
+                      </summary>
+                      <p className="mt-2 leading-7">{displaySummary}</p>
+                    </details>
+                  ) : (
+                    <p className="max-w-xl leading-7">暂无正文摘要</p>
+                  )}
                 </td>
                 <td className="px-4 py-4 text-sm">
                   <Badge tone="green">{eventTypeLabels[event.eventType as keyof typeof eventTypeLabels]}</Badge>
