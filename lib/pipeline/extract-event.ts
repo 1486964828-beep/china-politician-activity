@@ -31,6 +31,14 @@ function splitLeaderAliases(leader: { name: string; aliasesJson: string; officia
   };
 }
 
+function hasLeaderCue(
+  leader: { name: string; aliasesJson: string; officialTitle: string; normalizedTitle: string },
+  text: string
+) {
+  const { nameTerms, specificTitleTerms } = splitLeaderAliases(leader);
+  return [...nameTerms, ...specificTitleTerms].some((item) => item && text.includes(item));
+}
+
 export async function resolveLeaders(regionId: string, text: string, focusTexts: string[] = [text]) {
   const regionLeaders = await prisma.leader.findMany({
     where: {
@@ -40,23 +48,11 @@ export async function resolveLeaders(regionId: string, text: string, focusTexts:
   });
 
   for (const focusText of focusTexts) {
-    const byNameOrAliasInFocus = regionLeaders.filter((leader) => {
-      const { nameTerms } = splitLeaderAliases(leader);
-      return nameTerms.some((item) => item && focusText.includes(item));
-    });
+    const byNameOrAliasInFocus = regionLeaders.filter((leader) => hasLeaderCue(leader, focusText));
 
     if (byNameOrAliasInFocus.length > 0) {
       return byNameOrAliasInFocus;
     }
-  }
-
-  const byNameOrAliasInFullText = regionLeaders.filter((leader) => {
-    const { nameTerms } = splitLeaderAliases(leader);
-    return nameTerms.some((item) => item && text.includes(item));
-  });
-
-  if (byNameOrAliasInFullText.length > 0) {
-    return byNameOrAliasInFullText;
   }
 
   for (const focusText of focusTexts) {
@@ -68,6 +64,14 @@ export async function resolveLeaders(regionId: string, text: string, focusTexts:
     if (byTitleInFocus.length > 0) {
       return byTitleInFocus;
     }
+  }
+
+  const byNameOrAliasInLead = regionLeaders.filter((leader) =>
+    focusTexts.some((focusText) => hasLeaderCue(leader, focusText))
+  );
+
+  if (byNameOrAliasInLead.length > 0) {
+    return byNameOrAliasInLead;
   }
 
   return [];

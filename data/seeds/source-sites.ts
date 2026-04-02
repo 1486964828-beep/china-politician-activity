@@ -49,6 +49,33 @@ const EXTRA_MEDIA_SITES: SourceSiteSeed[] = [
     notes: "浙江地区官方媒体补充源。"
   },
   {
+    regionCode: "hangzhou",
+    siteName: "杭州网",
+    baseDomain: "hznews.hangzhou.com.cn",
+    sourceType: "OFFICIAL_MEDIA",
+    credibilityLevel: "B",
+    enabled: true,
+    notes: "杭州市委、市政府重要活动报道高频来源。"
+  },
+  {
+    regionCode: "hangzhou",
+    siteName: "杭州网主站",
+    baseDomain: "hangzhou.com.cn",
+    sourceType: "OFFICIAL_MEDIA",
+    credibilityLevel: "B",
+    enabled: true,
+    notes: "杭州本地官方新闻门户补充源。"
+  },
+  {
+    regionCode: "hangzhou",
+    siteName: "浙江在线",
+    baseDomain: "zjol.com.cn",
+    sourceType: "OFFICIAL_MEDIA",
+    credibilityLevel: "B",
+    enabled: true,
+    notes: "杭州样本补充接入省级党媒来源。"
+  },
+  {
     regionCode: "hubei",
     siteName: "荆楚网",
     baseDomain: "news.cnhubei.com",
@@ -92,6 +119,15 @@ const EXTRA_MEDIA_SITES: SourceSiteSeed[] = [
     credibilityLevel: "B",
     enabled: true,
     notes: "成都广播电视台融媒体平台补充源。"
+  },
+  {
+    regionCode: "chengdu",
+    siteName: "四川在线",
+    baseDomain: "scol.com.cn",
+    sourceType: "OFFICIAL_MEDIA",
+    credibilityLevel: "B",
+    enabled: true,
+    notes: "成都样本补充接入省级党媒来源。"
   }
 ];
 

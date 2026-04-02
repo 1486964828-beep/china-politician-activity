@@ -411,6 +411,56 @@
     ]
   },
   {
+    "id": "cmnhh0myh006jvdsomzkyfhxc",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-30T00:00:00.000Z",
+    "normalizedTitle": "姚高员在调研大城北地区产业高质量发展工作时强调 以科技创新推动文化发展 更好把文化软实力转化为经济社会发展硬实力",
+    "summary": "3月30日，市长姚高员赴拱墅区调研大城北地区产业高质量发展工作。他强调，要深入学习贯彻习近平总书记重要讲话和全国两会精神，按照省委、省政府和市委部署要求，以科技创新推动文化发展，促进人工智能在繁荣文化生产、增强文化传播、促进文化交流中展现更大作为，打造以数智+文化为特色的城北文化大走廊，更好把文化软实力转化为经济社会发展硬实力",
+    "eventType": "RESEARCH",
+    "locationText": null,
+    "keywordsJson": "[\"姚高员在调研大城北地区产业高质量发展工作时强调\",\"以科技创新推动文化发展\",\"更好把文化软实力转化为经济社会发展硬实力\",\"3月30日\",\"市长姚高员赴拱墅区调研大城北地区产业高质量发展工作。他强调\",\"要深入学习贯彻习近平总书记重要讲话和全国两会精神\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "f917cce5b93fa48aed19cebef3840f47f6a90702",
+    "leaders": [
+      {
+        "id": "cmnhh0n3x006lvdso8zui535u",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0n96006nvdsotfjbjjl3",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgzxxr003zvdsoj0t8sso6",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9199527.htm",
+          "title": "姚高员在调研大城北地区产业高质量发展工作时强调 以科技创新推动文化发展 更好把文化软实力转化为经济社会发展硬实力",
+          "publishTime": "2026-03-31T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmngyjsnm00etvdzkt07gun01",
     "region": {
       "code": "chengdu",
@@ -1011,6 +1061,56 @@
     ]
   },
   {
+    "id": "cmnhh08ja004rvdsoa4iaybec",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-27T00:00:00.000Z",
+    "normalizedTitle": "刘非在市296X先进制造业集群建设月度工作例会上强调 牢牢抓住项目建设这个牛鼻子 不断壮大296X先进制造业集群",
+    "summary": "首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论 时政要闻/领导重要讲话/人事任免/公告公示 所在位置： 杭州网>杭州新闻中心>杭州新政>刘非报道集 刘非在市296X先进制造业集群建设月度工作例会上强调 牢牢抓住项目建设这个牛鼻子 不断壮大296X先进制造业集群 杭州网 发布时间：2026-03-27 08:11 姚高员王文序出席25日，市委召开市296X先进制造业集群建设月度工作例会。省委常委、市委书记刘非主持并讲话，强调要深入学习贯彻习近平总书记重要讲话精神和全国两会部署，落实省委、省政府对项目建设的工作要求，牢牢抓住项目建设这个牛鼻子，大抓项目、抓大项目，加大招商引资和项目建设力度，推动296X先进制造业集群建设提质增效，为构建杭州特色现代化产业体系提供有力支撑",
+    "eventType": "ECONOMIC_WORK",
+    "locationText": null,
+    "keywordsJson": "[\"刘非在市296X先进制造业集群建设月度工作例会上强调\",\"牢牢抓住项目建设这个牛鼻子\",\"不断壮大296X先进制造业集群\",\"首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论\",\"时政要闻/领导重要讲话/人事任免/公告公示\",\"所在位置\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "e22f9b8bbfb33546cbd5cbca3bda5a5f9e91f52b",
+    "leaders": [
+      {
+        "id": "cmnhh08s4004tvdso46n2p69c",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0901004vvdsoh7466bhh",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgyu2s002fvdsoj82cu3rr",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9197602.htm",
+          "title": "刘非在市296X先进制造业集群建设月度工作例会上强调 牢牢抓住项目建设这个牛鼻子 不断壮大296X先进制造业集群",
+          "publishTime": "2026-03-27T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmngyjuwm00fbvdzk73ma2u0m",
     "region": {
       "code": "chengdu",
@@ -1422,6 +1522,56 @@
     ]
   },
   {
+    "id": "cmnhh0nt5006pvdso11iiilw4",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-26T00:00:00.000Z",
+    "normalizedTitle": "姚高员专题调研都市经济高质量发展工作强调 因地制宜发展新质生产力 把创新优势更好转化为发展效能",
+    "summary": "首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论 时政要闻/领导重要讲话/人事任免/公告公示 所在位置： 杭州网>杭州新闻中心>杭州新政>姚高员报道集 姚高员专题调研都市经济高质量发展工作强调 因地制宜发展新质生产力 把创新优势更好转化为发展效能 杭州网 发布时间：2026-03-27 08:10 昨日，市长姚高员赴上城区调研都市经济高质量发展工作。他强调，要深入学习贯彻习近平总书记重要讲话和全国两会精神，按照省委、省政府和市委部署要求，因地制宜发展新质生产力，把创新优势更好转化为发展效能，为十五五开好局起好步打下坚实基础",
+    "eventType": "RESEARCH",
+    "locationText": null,
+    "keywordsJson": "[\"姚高员专题调研都市经济高质量发展工作强调\",\"因地制宜发展新质生产力\",\"把创新优势更好转化为发展效能\",\"首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论\",\"时政要闻/领导重要讲话/人事任免/公告公示\",\"所在位置\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "eaeeba0c5df53be03df228596927b4079066a9e9",
+    "leaders": [
+      {
+        "id": "cmnhh0o14006rvdsomt1sdid9",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0o9p006tvdsoyoxqnwp8",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgzypm0041vdso7gyyswmb",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9197601.htm",
+          "title": "姚高员专题调研都市经济高质量发展工作强调 因地制宜发展新质生产力 把创新优势更好转化为发展效能",
+          "publishTime": "2026-03-27T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmngyjwpr00fnvdzkzxtgcypv",
     "region": {
       "code": "chengdu",
@@ -1459,56 +1609,6 @@
           "id": "cmngvbc6500ilvdik9ha11u9f",
           "url": "http://news.chengdu.cn/2026/0327/69c5e4163a56c94052c6208d.shtml",
           "title": "陈书平会见美国安利公司全球总裁兼首席执行官迈克尔·尼尔森一行_本地_红星新闻网",
-          "publishTime": "2026-03-27T00:00:00.000Z",
-          "sourceName": "",
-          "sourceDomain": "news.chengdu.cn",
-          "credibilityLevel": "B",
-          "sourceSite": {
-            "siteName": "成都全搜索",
-            "baseDomain": "chengdu.cn"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "id": "cmngyjvqw00fhvdzkdpl6af54",
-    "region": {
-      "code": "chengdu",
-      "name": "成都",
-      "type": "CITY"
-    },
-    "eventDate": "2026-03-26T00:00:00.000Z",
-    "normalizedTitle": "四川新闻联播丨王晓晖主持召开省委专题会议强调 积极推进闲置低效资产资源盘活利用 更好支撑四川经济社会高质量发展 施小琳讲话 于立军出席",
-    "summary": "会议强调积极推进闲置低效资产资源盘活利用更好支撑四川经济社会高质量发展施小琳讲话 于立军出席3月26日，省委书记王晓晖主持召开省委专题会议，研究部署进一步盘活利用闲置低效资产资源工作。他强调，要深入贯彻落实习近平总书记重要指示精神和党中央决策部署，树立和践行正确政绩观，积极推进闲置低效资产资源盘活利用，不断拓展发展空间、增添发展动力，更好支撑四川经济社会高质量发展",
-    "eventType": "MEETING",
-    "locationText": null,
-    "keywordsJson": "[\"四川新闻联播丨王晓晖主持召开省委专题会议强调\",\"积极推进闲置低效资产资源盘活利用\",\"更好支撑四川经济社会高质量发展\",\"施小琳讲话\",\"于立军出席_本地_红星新闻网\",\"成都头条\"]",
-    "confidenceScore": 0.8400000000000001,
-    "dedupKey": "f1f51c0db2d868f3df20a0abc2470921dd5bbf0f",
-    "leaders": [
-      {
-        "id": "cmngyjw2c00fjvdzk03epqx58",
-        "roleInEvent": "党委书记",
-        "leader": {
-          "id": "cmng8hbq5000xvds0r5atywq7",
-          "name": "曹立军",
-          "roleType": "PARTY_SECRETARY",
-          "officialTitle": "成都市委书记",
-          "normalizedTitle": "党委书记"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "id": "cmngyjwak00flvdzkxvezksit",
-        "isPrimary": true,
-        "matchScore": 1,
-        "extractionMethod": "official-adapter",
-        "rawArticle": {
-          "id": "cmngvb6t700i7vdikosjtuzlo",
-          "url": "http://news.chengdu.cn/2026/0327/69c5fea73a56c94052c62716.shtml",
-          "title": "四川新闻联播丨王晓晖主持召开省委专题会议强调 积极推进闲置低效资产资源盘活利用 更好支撑四川经济社会高质量发展 施小琳讲话 于立军出席_本地_红星新闻网",
           "publishTime": "2026-03-27T00:00:00.000Z",
           "sourceName": "",
           "sourceDomain": "news.chengdu.cn",
@@ -2355,56 +2455,6 @@
     ]
   },
   {
-    "id": "cmngyk2je00ghvdzk2imghlwr",
-    "region": {
-      "code": "chengdu",
-      "name": "成都",
-      "type": "CITY"
-    },
-    "eventDate": "2026-03-25T00:00:00.000Z",
-    "normalizedTitle": "王飞任川航党委书记、董事长",
-    "summary": "3月25日讯 3月23日上午， 川航官网消息，四川航空集团有限责任公司召开干部大会，宣布省委、省政府关于公司党委书记、董事长的任免决定：王飞同志任四川航空集团有限责任公司党委书记、董事长；李越同志不再担任四川航空集团有限责任公司党委书记、董事长职务。根据川航官网，此前，王飞担任川航集团党委副书记、副董事长、总经理",
-    "eventType": "OTHER",
-    "locationText": null,
-    "keywordsJson": "[\"王飞任川航党委书记\",\"董事长_原创_红星新闻网\",\"成都头条\",\"原创\",\"本地\",\"国内\"]",
-    "confidenceScore": 0.8400000000000001,
-    "dedupKey": "3f9ddc9f6615b86ac42e39eaad1b8c9776d37d4e",
-    "leaders": [
-      {
-        "id": "cmngyk2t400gjvdzk8j6osyli",
-        "roleInEvent": "党委书记",
-        "leader": {
-          "id": "cmng8hbq5000xvds0r5atywq7",
-          "name": "曹立军",
-          "roleType": "PARTY_SECRETARY",
-          "officialTitle": "成都市委书记",
-          "normalizedTitle": "党委书记"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "id": "cmngyk2zc00glvdzkeiloikye",
-        "isPrimary": true,
-        "matchScore": 1,
-        "extractionMethod": "official-adapter",
-        "rawArticle": {
-          "id": "cmngvfnfg00qzvdikazs2tpod",
-          "url": "http://news.chengdu.cn/2026/0325/69c3a5073a56c94052c5c2ba.shtml",
-          "title": "王飞任川航党委书记、董事长_原创_红星新闻网",
-          "publishTime": "2026-03-25T00:00:00.000Z",
-          "sourceName": "",
-          "sourceDomain": "news.chengdu.cn",
-          "credibilityLevel": "B",
-          "sourceSite": {
-            "siteName": "成都全搜索",
-            "baseDomain": "chengdu.cn"
-          }
-        }
-      }
-    ]
-  },
-  {
     "id": "cmngyjye400ftvdzkxrb14qn8",
     "region": {
       "code": "chengdu",
@@ -2705,50 +2755,50 @@
     ]
   },
   {
-    "id": "cmngyjzqp00fzvdzk6d84qc7b",
+    "id": "cmnhh09f2004xvdso1iehdxu3",
     "region": {
-      "code": "chengdu",
-      "name": "成都",
+      "code": "hangzhou",
+      "name": "杭州",
       "type": "CITY"
     },
     "eventDate": "2026-03-24T00:00:00.000Z",
-    "normalizedTitle": "王晓晖主持召开省委人才工作领导小组会议强调 坚持教育科技人才一体发展 把更多优秀人才集聚到治蜀兴川事业发展中来 施小琳于立军出席",
-    "summary": "会议强调坚持教育科技人才一体发展把更多优秀人才集聚到治蜀兴川事业发展中来施小琳于立军出席3月24日，省委人才工作领导小组会议召开，省委书记、领导小组组长王晓晖主持会议并讲话。他强调，要深入贯彻落实习近平总书记关于做好新时代人才工作的重要思想，坚持教育科技人才一体发展，深入实施新时代人才强省战略，统筹抓好各层次各领域人才队伍建设，把更多优秀人才集聚到治蜀兴川事业发展中来",
-    "eventType": "MEETING",
+    "normalizedTitle": "刘非在全市村社党组织书记示范培训班开班式上强调 牢记嘱托 为民造福 做发展带头人新风示范人和谐引领人群众贴心人",
+    "summary": "首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论 时政要闻/领导重要讲话/人事任免/公告公示 所在位置： 杭州网>杭州新闻中心>杭州新政>刘非报道集 刘非在全市村社党组织书记示范培训班开班式上强调 牢记嘱托 为民造福 做发展带头人新风示范人和谐引领人群众贴心人 杭州网 发布时间：2026-03-24 10:38 刘非在全市村社党组织书记示范培训班开班式上强调牢记嘱托 为民造福 做发展带头人新风示范人和谐引领人群众贴心人杭州日报讯 23日，全市村社党组织书记示范培训班在市委党校开班。省委常委、市委书记刘非出席开班式并讲授履职第一课",
+    "eventType": "ATTENDANCE",
     "locationText": null,
-    "keywordsJson": "[\"王晓晖主持召开省委人才工作领导小组会议强调\",\"坚持教育科技人才一体发展\",\"把更多优秀人才集聚到治蜀兴川事业发展中来\",\"施小琳于立军出席_本地_红星新闻网\",\"成都头条\",\"原创\"]",
+    "keywordsJson": "[\"刘非在全市村社党组织书记示范培训班开班式上强调\",\"牢记嘱托\",\"为民造福\",\"做发展带头人新风示范人和谐引领人群众贴心人\",\"首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论\",\"时政要闻/领导重要讲话/人事任免/公告公示\"]",
     "confidenceScore": 0.8400000000000001,
-    "dedupKey": "1a462d7203ec1fec9d6f90dda6cd70916e15bd6c",
+    "dedupKey": "b7d7b8fab0b068b3ece0383e6a4a154dd9429c2b",
     "leaders": [
       {
-        "id": "cmngyjzyb00g1vdzk4l015nzq",
+        "id": "cmnhh09iz004zvdso2kbaq5nn",
         "roleInEvent": "党委书记",
         "leader": {
-          "id": "cmng8hbq5000xvds0r5atywq7",
-          "name": "曹立军",
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
           "roleType": "PARTY_SECRETARY",
-          "officialTitle": "成都市委书记",
+          "officialTitle": "杭州市委书记",
           "normalizedTitle": "党委书记"
         }
       }
     ],
     "sources": [
       {
-        "id": "cmngyk07h00g3vdzkib7s9iav",
+        "id": "cmnhh09xv0051vdsodrag3w1k",
         "isPrimary": true,
         "matchScore": 1,
         "extractionMethod": "official-adapter",
         "rawArticle": {
-          "id": "cmngvc3qu00k7vdikkdsycdcr",
-          "url": "http://news.chengdu.cn/2026/0325/69c34a693a56c94052c5acaf.shtml",
-          "title": "王晓晖主持召开省委人才工作领导小组会议强调 坚持教育科技人才一体发展 把更多优秀人才集聚到治蜀兴川事业发展中来 施小琳于立军出席_本地_红星新闻网",
-          "publishTime": "2026-03-25T00:00:00.000Z",
-          "sourceName": "",
-          "sourceDomain": "news.chengdu.cn",
+          "id": "cmnhgyvt8002hvdsoh96b9r8e",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9195919.htm",
+          "title": "刘非在全市村社党组织书记示范培训班开班式上强调 牢记嘱托 为民造福 做发展带头人新风示范人和谐引领人群众贴心人",
+          "publishTime": "2026-03-24T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
           "credibilityLevel": "B",
           "sourceSite": {
-            "siteName": "成都全搜索",
-            "baseDomain": "chengdu.cn"
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
           }
         }
       }
@@ -3399,6 +3449,56 @@
     ]
   },
   {
+    "id": "cmnhh0otp006vvdso819abkx0",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-23T00:00:00.000Z",
+    "normalizedTitle": "姚高员在余杭区宣讲全国两会精神并调研时强调 深化改革优化服务强化保障全力打造一流创新生态",
+    "summary": "3月23日，市长姚高员在余杭区宣讲全国两会精神并调研打造一流创新生态工作。他强调，要深入学习贯彻习近平总书记在全国两会期间的重要讲话精神，认真落实全国两会部署，坚定争创全国人工智能创新发展第一城的决心信心，以更大力度深化改革、优化服务、强化保障，全力打造一流创新生态，为培育新质生产力、塑造发展新动能新优势提供坚实支撑",
+    "eventType": "RESEARCH",
+    "locationText": "余杭区宣讲全国两会精神并",
+    "keywordsJson": "[\"姚高员在余杭区宣讲全国两会精神并调研时强调\",\"深化改革优化服务强化保障全力打造一流创新生态\",\"3月23日\",\"市长姚高员在余杭区宣讲全国两会精神并调研打造一流创新生态工作。他强调\",\"要深入学习贯彻习近平总书记在全国两会期间的重要讲话精神\",\"认真落实全国两会部署\"]",
+    "confidenceScore": 0.8700000000000001,
+    "dedupKey": "6d095c96c9843cd8def3b25725fcdeaeea4a3854",
+    "leaders": [
+      {
+        "id": "cmnhh0p3d006xvdso7jyo7gof",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0paa006zvdsofpvpaj17",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgzztp0043vdsoab4w4aps",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9195917.htm",
+          "title": "姚高员在余杭区宣讲全国两会精神并调研时强调 深化改革优化服务强化保障全力打造一流创新生态",
+          "publishTime": "2026-03-24T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmngyk0p600g5vdzkbq0hde51",
     "region": {
       "code": "chengdu",
@@ -3749,6 +3849,167 @@
     ]
   },
   {
+    "id": "cmnhh0plm0071vdso40n8ocj8",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-21T00:00:00.000Z",
+    "normalizedTitle": "姚高员主持召开市政府常务会议强调 积极推行包容审慎监管执法 持续推动杭州建设一流营商环境",
+    "summary": "会议强调 积极推行包容审慎监管执法 持续推动杭州建设一流营商环境 杭州网 发布时间：2026-03-21 07:31 20日，市长姚高员主持召开市政府常务会议，研究杭州市积极推行包容审慎监管执法进一步优化法治化营商环境的实施意见杭州市新一轮推进软件和信息技术服务业高质量发展的若干政策等事项。会议指出，推行包容审慎监管执法方式是推进法治政府建设的重要抓手、深化改革创新的重要探索、优化营商环境的重要举措",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"姚高员主持召开市政府常务会议强调\",\"积极推行包容审慎监管执法\",\"持续推动杭州建设一流营商环境\",\"会议强调\",\"杭州网\",\"发布时间\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "18c3c2f72b34518cbf307778be4e3704986f861d",
+    "leaders": [
+      {
+        "id": "cmnhh0pqp0073vdsoith3ahu7",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0pxb0075vdsok7n52w46",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhh00gf0045vdsoyddk9tnx",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9194383.htm",
+          "title": "姚高员主持召开市政府常务会议强调 积极推行包容审慎监管执法 持续推动杭州建设一流营商环境",
+          "publishTime": "2026-03-21T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0alv0053vdso0e32vqxe",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-21T00:00:00.000Z",
+    "normalizedTitle": "刘非在全市建设更高水平平安杭州工作会议上强调 建设更高水平平安杭州 实现高质量发展和高水平安全良性互动",
+    "summary": "首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论 时政要闻/领导重要讲话/人事任免/公告公示 所在位置： 杭州网>杭州新闻中心>杭州新政>刘非报道集 刘非在全市建设更高水平平安杭州工作会议上强调 建设更高水平平安杭州 实现高质量发展和高水平安全良性互动 杭州网 发布时间：2026-03-21 07:32 20日，全市建设更高水平平安杭州工作会议召开。省委常委、市委书记刘非出席并讲话，强调要深入学习贯彻习近平法治思想和习近平总书记关于平安中国建设的重要思想，全面贯彻总体国家安全观，贯彻落实全省建设更高水平平安浙江工作会议部署要求，牢固树立和践行正确政绩观，一体推进更高水平平安杭州法治杭州建设，实现高质量发展和高水平安全良性互动，为实现十五五良好开局提供坚强保障",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"刘非在全市建设更高水平平安杭州工作会议上强调\",\"建设更高水平平安杭州\",\"实现高质量发展和高水平安全良性互动\",\"首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论\",\"时政要闻/领导重要讲话/人事任免/公告公示\",\"所在位置\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "39310069b5e852beb25db1eb74d34d8198a65cfc",
+    "leaders": [
+      {
+        "id": "cmnhh0ats0055vdsojysow9bi",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0b510057vdsoqmxqtl8m",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgyxzm002jvdsonc9f7gp3",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9194386.htm",
+          "title": "刘非在全市建设更高水平平安杭州工作会议上强调 建设更高水平平安杭州 实现高质量发展和高水平安全良性互动",
+          "publishTime": "2026-03-21T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0qdz0077vdsotkqoidni",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-20T00:00:00.000Z",
+    "normalizedTitle": "市政府与国网浙江省电力有限公司签订战略合作协议 刘非见证签约 姚高员讲话",
+    "summary": "首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论 时政要闻/领导重要讲话/人事任免/公告公示 所在位置： 杭州网>杭州新闻中心>杭州新政>姚高员报道集 市政府与国网浙江省电力有限公司签订战略合作协议 刘非见证签约 姚高员讲话 杭州网 发布时间：2026-03-20 09:01 19日，市政府与国网浙江省电力有限公司签订战略合作协议。省委常委、市委书记刘非见证签约，市委副书记、市长姚高员讲话",
+    "eventType": "ECONOMIC_WORK",
+    "locationText": null,
+    "keywordsJson": "[\"市政府与国网浙江省电力有限公司签订战略合作协议\",\"刘非见证签约\",\"姚高员讲话\",\"首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论\",\"时政要闻/领导重要讲话/人事任免/公告公示\",\"所在位置\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "51d2d54471b9726783ba523be8a4f74b046e90ba",
+    "leaders": [
+      {
+        "id": "cmnhh0qij0079vdso7ukb56ot",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmnhh0qrp007bvdsoimupieok",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0r4h007dvdso9kv97xbq",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhh018k0047vdsoqicfer13",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9193869.htm",
+          "title": "市政府与国网浙江省电力有限公司签订战略合作协议 刘非见证签约 姚高员讲话",
+          "publishTime": "2026-03-20T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmngyk1k600gbvdzk57f7im4y",
     "region": {
       "code": "chengdu",
@@ -4065,6 +4326,1100 @@
           "sourceSite": {
             "siteName": "北京省级政府门户",
             "baseDomain": "beijing.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0rt6007fvdsolalvfwx4",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-19T00:00:00.000Z",
+    "normalizedTitle": "姚高员在一季度经济运行分析会暨促进有效投资和招商引资工作推进会上强调 锚定目标奋力争先 全力确保实现一季度开门稳开门好开门红",
+    "summary": "3月19日，市政府召开一季度经济运行分析会暨促进有效投资和招商引资工作推进会。市长姚高员在会上强调，要深入学习贯彻习近平总书记重要讲话重要指示批示精神，按照省委、省政府和市委部署要求，锚定目标、奋力争先，推动经济实现质的有效提升和量的合理增长，全力确保一季度开门稳、开门好、开门红",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"姚高员在一季度经济运行分析会暨促进有效投资和招商引资工作推进会上强调\",\"锚定目标奋力争先\",\"全力确保实现一季度开门稳开门好开门红\",\"3月19日\",\"市政府召开一季度经济运行分析会暨促进有效投资和招商引资工作推进会。市长姚高员在会上强调\",\"要深入学习贯彻习近平总书记重要讲话重要指示批示精神\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "cc75440cf89796654b165dbb9d700e1eabfe0582",
+    "leaders": [
+      {
+        "id": "cmnhh0s48007hvdsovx4qodjm",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0sl1007jvdsoevouq9go",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhh01tq0049vdsoqcnoeaxg",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9193866.htm",
+          "title": "姚高员在一季度经济运行分析会暨促进有效投资和招商引资工作推进会上强调 锚定目标奋力争先 全力确保实现一季度开门稳开门好开门红",
+          "publishTime": "2026-03-20T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0c8w005fvdsouhzh9j30",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-19T00:00:00.000Z",
+    "normalizedTitle": "刘非赴开化县开展结对帮扶工作时强调 完善山海协作和结对帮扶机制 助力山区海岛县同步走向共同富裕",
+    "summary": "首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论 时政要闻/领导重要讲话/人事任免/公告公示 所在位置： 杭州网>杭州新闻中心>杭州新政>刘非报道集 刘非赴开化县开展结对帮扶工作时强调 完善山海协作和结对帮扶机制 助力山区海岛县同步走向共同富裕 杭州网 发布时间：2026-03-19 14:33 杭州日报讯 18日，省委常委、市委书记刘非赴开化县开展结对帮扶工作。他强调，要深入学习贯彻习近平总书记关于共同富裕的重要论述和考察浙江重要讲话精神，深入践行八八战略，聚焦聚力总书记4+1重要要求和省委132总体工作部署，全面落实以千万工程牵引城乡融合发展缩小三大差距、推进共同富裕先行示范的工作部署，完善以增强内生动力为导向的山海协作和结对帮扶机制，突出真情实意、真金白银、真抓实干、真绩实效，助力山区海岛县同步走向共同富裕，为全省高质量发展建设共同富裕示范区作出更大贡献",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"刘非赴开化县开展结对帮扶工作时强调\",\"完善山海协作和结对帮扶机制\",\"助力山区海岛县同步走向共同富裕\",\"首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论\",\"时政要闻/领导重要讲话/人事任免/公告公示\",\"所在位置\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "114f59b085f25cadd152137c9ce13045d36d275c",
+    "leaders": [
+      {
+        "id": "cmnhh0ccz005hvdso7a3u2jvf",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0ch2005jvdsoj57dt8gx",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgz7oy002nvdsoamhkxo5b",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9193468.htm",
+          "title": "刘非赴开化县开展结对帮扶工作时强调 完善山海协作和结对帮扶机制 助力山区海岛县同步走向共同富裕",
+          "publishTime": "2026-03-19T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0doy005rvdsomujtcjzg",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-18T00:00:00.000Z",
+    "normalizedTitle": "深化循迹溯源 抓实学习教育 坚定不移为人民出政绩以实干出政绩",
+    "summary": "首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论 时政要闻/领导重要讲话/人事任免/公告公示 所在位置： 杭州网>杭州新闻中心>杭州新政>刘非报道集 深化循迹溯源 抓实学习教育 坚定不移为人民出政绩以实干出政绩 杭州网 发布时间：2026-03-18 12:52 市委理论学习中心组举行树立和践行正确政绩观学习教育专题学习会深化循迹溯源 抓实学习教育 坚定不移为人民出政绩以实干出政绩刘非讲话 姚高员暨军民王文序马小秋作交流杭州日报讯 17日，市委理论学习中心组举行树立和践行正确政绩观学习教育专题学习会。省委常委、市委书记刘非主持并讲话，强调政绩观问题是一个根本性问题，要把学习贯彻习近平总书记关于树立和践行正确政绩观的重要论述，与学习贯彻习近平总书记地方工作期间坚持正确政绩观生动实践结合起来，与学习贯彻全国两会精神结合起来，与贯彻落实习近平总书记对浙江、对杭州的重要讲话重要指示批示精神结合起来，紧扣立党为公、为民造福、科学决策、真抓实干的总要求，深化循迹溯源悟思想、自觉践行正确政绩观，以高度的政治自觉推动学习教育走深走实，教育引导各级党组织和党员、干部为人民出政绩、以实干出政绩，为奋力交出十五五开局之年高分答卷、创造无愧于时代的新业绩提供有力保障",
+    "eventType": "PARTY_BUILDING",
+    "locationText": null,
+    "keywordsJson": "[\"深化循迹溯源\",\"抓实学习教育\",\"坚定不移为人民出政绩以实干出政绩\",\"首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论\",\"时政要闻/领导重要讲话/人事任免/公告公示\",\"所在位置\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "a60f28fa8da336614b72d3b1386fab795a9dd830",
+    "leaders": [
+      {
+        "id": "cmnhh0dwu005tvdsoq4r0pcqv",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmnhh0e4c005vvdsosfvvu7y6",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0ebb005xvdsonni1uavj",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgza6k002rvdso5g9nyyvo",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9192912.htm",
+          "title": "深化循迹溯源 抓实学习教育 坚定不移为人民出政绩以实干出政绩",
+          "publishTime": "2026-03-18T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0d2v005lvdsonn75t2f5",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-18T00:00:00.000Z",
+    "normalizedTitle": "市委常委会召开会议 刘非主持",
+    "summary": "会议指出，习近平总书记在求是发表的重要文章让愿担当、敢担当、善担当蔚然成风，深刻阐释何为担当、为谁担当的原则立场，清晰指明怎样担当、靠什么担当的方法路径，为新时代锻造堪当重任的高素质干部队伍提供了重要遵循。我们要结合正在开展的树立和践行正确政绩观学习教育，深入学习领会这篇重要文章的核心要义和实践要求，深刻把握什么是共产党人的担当，认真查摆、严肃整治不愿担当、不敢担当、不善担当、乱担当乱作为等方面的问题，提高广大党员、干部履职本领，以正确选人用人导向激励干部担当作为，贯彻落实好党的二十届四中全会精神和党中央各项决策部署，聚焦聚力落实总书记4+1重要要求和省委132总体工作部署，围绕十五五时期七个重大突破，一体推进重点任务、重点工作、重大改革，在中国式现代化建设实践中展现杭州应有担当作为",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"市委常委会召开会议\",\"刘非主持\",\"会议指出\",\"习近平总书记在求是发表的重要文章让愿担当\",\"敢担当\",\"善担当蔚然成风\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "4c57d959684cd80697730a6e9d17a84477b29df9",
+    "leaders": [
+      {
+        "id": "cmnhh0d93005nvdso8rr1d9eh",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0ddp005pvdso4znyogge",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgz97m002pvdsowhrrok6i",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9192913.htm",
+          "title": "市委常委会召开会议 刘非主持",
+          "publishTime": "2026-03-18T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0bfz0059vdso56pg6qwm",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-18T00:00:00.000Z",
+    "normalizedTitle": "刘非在建德市宣讲全国两会精神并调研时强调 因地制宜发展新质生产力 坚定不移推动高质量发展",
+    "summary": "首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论 时政要闻/领导重要讲话/人事任免/公告公示 所在位置： 杭州网>杭州新闻中心>杭州新政>刘非报道集 刘非在建德市宣讲全国两会精神并调研时强调 因地制宜发展新质生产力 坚定不移推动高质量发展 杭州网 发布时间：2026-03-20 08:59 18日至19日，省委常委、市委书记刘非在建德市宣讲全国两会精神并调研。他强调，要深入学习贯彻习近平总书记在全国两会期间的重要讲话精神，认真落实全国两会部署，因地制宜发展新质生产力，坚定不移推动高质量发展，扎实推进共同富裕，奋力交出十五五开局之年高分答卷，创造经得起实践、人民、历史检验的实绩",
+    "eventType": "RESEARCH",
+    "locationText": "建德市宣讲全国两会精神并",
+    "keywordsJson": "[\"刘非在建德市宣讲全国两会精神并调研时强调\",\"因地制宜发展新质生产力\",\"坚定不移推动高质量发展\",\"首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论\",\"时政要闻/领导重要讲话/人事任免/公告公示\",\"所在位置\"]",
+    "confidenceScore": 0.8700000000000001,
+    "dedupKey": "44e56cb0db2c41bb773db2bd9f299378e6b89e2d",
+    "leaders": [
+      {
+        "id": "cmnhh0bng005bvdsov778sxzv",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0bv9005dvdso5takpv4a",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgz0wr002lvdsogwbqzzvr",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9193863.htm",
+          "title": "刘非在建德市宣讲全国两会精神并调研时强调 因地制宜发展新质生产力 坚定不移推动高质量发展",
+          "publishTime": "2026-03-20T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhg10dm0153vd1srfahl1cb",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-18T00:00:00.000Z",
+    "normalizedTitle": "陈书平主持召开市政府第78次常务会议 研究市政府2026年重点工作分工",
+    "summary": "3月18日，市委副书记、市长陈书平主持召开市政府第78次常务会议，研究市政府2026年重点工作分工、推进全市文化和旅游事业高质量发展等工作。会议指出，细化政府工作报告目标任务，是推动年度重点工作落地落实的有效举措、重要抓手",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"陈书平主持召开市政府第78次常务会议\",\"研究市政府2026年重点工作分工_本地_红星新闻网\",\"3月18日\",\"市委副书记\",\"市长陈书平主持召开市政府第78次常务会议\",\"研究市政府2026年重点工作分工\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "8f3ca983fa2d91bad51c52ad3bafeb030270a779",
+    "leaders": [
+      {
+        "id": "cmnhg10nz0155vd1s1s6up19j",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhg10y50157vd1s6pcmvun3",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhfuziq00shvd1syg07v8bi",
+          "url": "http://news.chengdu.cn/2026/0319/69bb580c3a56c94052c496cd.shtml",
+          "title": "陈书平主持召开市政府第78次常务会议 研究市政府2026年重点工作分工_本地_红星新闻网",
+          "publishTime": "2026-03-19T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhg0yoa014xvd1sp5pmh8ja",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-18T00:00:00.000Z",
+    "normalizedTitle": "陈书平会见中兴通讯高级副总裁林炳一行",
+    "summary": "3月18日，市委副书记、市长陈书平会见了中兴通讯高级副总裁林炳一行。会见中，双方围绕抢抓一系列国家重大战略机遇，立足成都算力资源、产业基础、创新活力与开放市场等优势，进一步深化在数字经济、人工智能、低空经济等领域的务实合作，加大在蓉投资布局和项目建设力度，加强产业链上下游和应用场景对接，推动在更高层次、更宽领域实现合作共赢，更好助力成都高质量发展进行了深入交流",
+    "eventType": "MEETING_WITH",
+    "locationText": null,
+    "keywordsJson": "[\"陈书平会见中兴通讯高级副总裁林炳一行_本地_红星新闻网\",\"3月18日\",\"市委副书记\",\"市长陈书平会见了中兴通讯高级副总裁林炳一行。会见中\",\"双方围绕抢抓一系列国家重大战略机遇\",\"立足成都算力资源\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "c4a8eb5a08230c1756315dee76afcc610997a588",
+    "leaders": [
+      {
+        "id": "cmnhg0yx4014zvd1sgl6j407f",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhg0zhh0151vd1st4g1wdnw",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhfuy1f00sdvd1se5mfeav7",
+          "url": "http://news.chengdu.cn/2026/0319/69bb58cc3a56c94052c49701.shtml",
+          "title": "陈书平会见中兴通讯高级副总裁林炳一行_本地_红星新闻网",
+          "publishTime": "2026-03-19T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhg0u48014rvd1sh9aopz3k",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-18T00:00:00.000Z",
+    "normalizedTitle": "曹立军会见德国工商大会和德国隐形冠军企业成都园区行嘉宾",
+    "summary": "3月18日至20日，2026年德国隐形冠军企业成都园区行系列活动举行。19日，省委常委、市委书记曹立军会见了德国工商大会和德国隐形冠军企业成都园区行嘉宾",
+    "eventType": "RESEARCH",
+    "locationText": null,
+    "keywordsJson": "[\"曹立军会见德国工商大会和德国隐形冠军企业成都园区行嘉宾_本地_红星新闻网\",\"3月18日至20日\",\"2026年德国隐形冠军企业成都园区行系列活动举行。19日\",\"省委常委\",\"市委书记曹立军会见了德国工商大会和德国隐形冠军企业成都园区行嘉宾\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "d94bac49289b414990881f50d12e7cd8650feb09",
+    "leaders": [
+      {
+        "id": "cmnhg0uee014tvd1s3hf8k9b1",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhg0usg014vvd1sf24di78a",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhfupxk00rrvd1szkv8xhqp",
+          "url": "http://news.chengdu.cn/2026/0319/69bbd9503a56c94052c4b924.shtml",
+          "title": "曹立军会见德国工商大会和德国隐形冠军企业成都园区行嘉宾_本地_红星新闻网",
+          "publishTime": "2026-03-19T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0sy5007lvdsovssr1upe",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-17T00:00:00.000Z",
+    "normalizedTitle": "姚高员赴上城区调研专业市场转型升级工作强调 拓展更多消费新业态新模式新场景 全力推动杭州建设国际新型消费中心城市",
+    "summary": "3月17日，市长姚高员赴上城区调研专业市场转型升级工作。他强调，要深入学习贯彻习近平总书记在全国两会期间的重要讲话精神和全国两会精神，按照全省加快推动专业市场高质量发展工作会议部署要求，积极推进专业市场迭代转型、优化功能、重塑形态、提升能级，拓展更多消费新业态、新模式、新场景，全力推动杭州建设国际新型消费中心城市",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"姚高员赴上城区调研专业市场转型升级工作强调\",\"拓展更多消费新业态新模式新场景\",\"全力推动杭州建设国际新型消费中心城市\",\"3月17日\",\"市长姚高员赴上城区调研专业市场转型升级工作。他强调\",\"要深入学习贯彻习近平总书记在全国两会期间的重要讲话精神和全国两会精神\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "249a13a92524209a84802ef73a52b4740303140b",
+    "leaders": [
+      {
+        "id": "cmnhh0t4z007nvdsog37pi7yq",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0tds007pvdso0rpqqpq7",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhh02f0004bvdsodmjz9vlt",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9192904.htm",
+          "title": "姚高员赴上城区调研专业市场转型升级工作强调 拓展更多消费新业态新模式新场景 全力推动杭州建设国际新型消费中心城市",
+          "publishTime": "2026-03-18T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhg1b7b015hvd1sgs66lv85",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-17T00:00:00.000Z",
+    "normalizedTitle": "市委农村工作会议召开",
+    "summary": "3月17日，市委农村工作会议召开。省委常委、市委书记曹立军出席会议并讲话",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"市委农村工作会议召开_本地_红星新闻网\",\"3月17日\",\"市委农村工作会议召开。省委常委\",\"市委书记曹立军出席会议并讲话\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "55d7d7b7b29218f0feb3d6aff6422dc89d842d19",
+    "leaders": [
+      {
+        "id": "cmnhg1bgv015jvd1s6fyg6phg",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmnhg1bs4015lvd1syofpi8ip",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhg1c2o015nvd1sr40bff12",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhfvgfm00ttvd1s559o4gt4",
+          "url": "http://news.chengdu.cn/2026/0317/69b9386d3a56c94052c447fb.shtml",
+          "title": "市委农村工作会议召开_本地_红星新闻网",
+          "publishTime": "2026-03-17T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhg18s60159vd1schdar2gg",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-17T00:00:00.000Z",
+    "normalizedTitle": "全市区（市）县和镇领导班子换届工作会议召开",
+    "summary": "3月17日，全市区（市）县和镇领导班子换届工作会议召开。省委常委、市委书记曹立军出席会议并讲话",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"全市区（市）县和镇领导班子换届工作会议召开_本地_红星新闻网\",\"3月17日\",\"全市区（市）县和镇领导班子换届工作会议召开。省委常委\",\"市委书记曹立军出席会议并讲话\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "77ea0259fdd69bcfdb5cb698a752df65be9b6dcc",
+    "leaders": [
+      {
+        "id": "cmnhg190i015bvd1shi5iq3au",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmnhg19di015dvd1s5ufsp5x5",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhg19og015fvd1s1pjm0gss",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhfvedg00tnvd1sjn4ni3sr",
+          "url": "http://news.chengdu.cn/2026/0317/69b944513a56c94052c44b1c.shtml",
+          "title": "全市区（市）县和镇领导班子换届工作会议召开_本地_红星新闻网",
+          "publishTime": "2026-03-17T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0tvj007rvdsolo4ls9b6",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-16T00:00:00.000Z",
+    "normalizedTitle": "姚高员在全市金融业高质量发展座谈会上强调 持续强化金融要素保障 更好赋能杭州经济社会高质量发展",
+    "summary": "3月16日，全市金融业高质量发展座谈会召开。市长姚高员强调，要深入贯彻习近平总书记关于金融工作的重要论述，锚定高质量发展这个首要任务，深化金融改革创新，更好助力科技创新和产业创新深度融合、先进制造业集群建设、中小企业发展，为推动杭州十五五开好局、起好步贡献力量",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"姚高员在全市金融业高质量发展座谈会上强调\",\"持续强化金融要素保障\",\"更好赋能杭州经济社会高质量发展\",\"3月16日\",\"全市金融业高质量发展座谈会召开。市长姚高员强调\",\"要深入贯彻习近平总书记关于金融工作的重要论述\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "e5b96f667f2389abdf44817a4e39c59b3b173df1",
+    "leaders": [
+      {
+        "id": "cmnhh0u21007tvdsopvgglqja",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0u8t007vvdsog9cnz2jv",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhh0390004dvdso6ebz8432",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9192095.htm",
+          "title": "姚高员在全市金融业高质量发展座谈会上强调 持续强化金融要素保障 更好赋能杭州经济社会高质量发展",
+          "publishTime": "2026-03-17T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhg1p1r0161vd1szngly3jl",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-16T00:00:00.000Z",
+    "normalizedTitle": "曹立军主持召开市委宣传思想文化工作领导小组第二次全体会议",
+    "summary": "3月16日，十四届市委宣传思想文化工作领导小组第二次全体会议召开。省委常委、市委书记曹立军主持会议并讲话",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"曹立军主持召开市委宣传思想文化工作领导小组第二次全体会议_本地_红星新闻网\",\"3月16日\",\"十四届市委宣传思想文化工作领导小组第二次全体会议召开。省委常委\",\"市委书记曹立军主持会议并讲话\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "81f2fe5f3969d9bc8b3b964a246e1fe6c61d28c1",
+    "leaders": [
+      {
+        "id": "cmnhg1pcp0163vd1slctvpkcx",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhg1pr50165vd1sjsqcucck",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhfvz7k00v7vd1sykvrenuw",
+          "url": "http://news.chengdu.cn/2026/0316/69b7e92a3a56c94052c415f7.shtml",
+          "title": "曹立军主持召开市委宣传思想文化工作领导小组第二次全体会议_本地_红星新闻网",
+          "publishTime": "2026-03-16T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhg1nmm015vvd1s1su87pea",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-16T00:00:00.000Z",
+    "normalizedTitle": "成都市2026年上半年新兵入伍欢送仪式举行 陈书平为新兵送行",
+    "summary": "3月16日，成都市2026年上半年新兵入伍欢送仪式在成都东站西广场举行。在庄严的国歌声中，700余名入伍新兵英姿挺拔、整装待发，怀揣着对军营的向往和期待，奔向报效祖国的新征程",
+    "eventType": "ATTENDANCE",
+    "locationText": "成都东站西广场",
+    "keywordsJson": "[\"成都市2026年上半年新兵入伍欢送仪式举行\",\"陈书平为新兵送行_本地_红星新闻网\",\"3月16日\",\"成都市2026年上半年新兵入伍欢送仪式在成都东站西广场举行。在庄严的国歌声中\",\"700余名入伍新兵英姿挺拔\",\"整装待发\"]",
+    "confidenceScore": 0.8700000000000001,
+    "dedupKey": "ad6584041015fba16fb2bbfa8c04b50138d00dfe",
+    "leaders": [
+      {
+        "id": "cmnhg1nv0015xvd1su9j56mfh",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhg1o7e015zvd1s0zu8zjeh",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhfvy9400v5vd1s4ukg4lj4",
+          "url": "http://news.chengdu.cn/2026/0316/69b7e95c3a56c94052c4160c.shtml",
+          "title": "成都市2026年上半年新兵入伍欢送仪式举行 陈书平为新兵送行_本地_红星新闻网",
+          "publishTime": "2026-03-16T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhg1kqf015pvd1sqi4bpbvb",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-16T00:00:00.000Z",
+    "normalizedTitle": "市政府党组（扩大）会议召开 传达学习全国两会精神 研究贯彻落实举措",
+    "summary": "3月16日，市委副书记、市长陈书平主持召开市政府党组（扩大）会议，传达学习习近平总书记有关重要讲话重要指示精神，全国两会及中央、省、市相关会议精神，研究市政府贯彻落实举措。会议指出，今年全国两会是在十五五开局起步、全面建设社会主义现代化国家进入关键阶段召开的一次十分重要的会议",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"市政府党组（扩大）会议召开\",\"传达学习全国两会精神\",\"研究贯彻落实举措_本地_红星新闻网\",\"3月16日\",\"市委副书记\",\"市长陈书平主持召开市政府党组（扩大）会议\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "ac454f92d9d1f441362791545b7a0ba362210049",
+    "leaders": [
+      {
+        "id": "cmnhg1l1f015rvd1stlv5324a",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhg1lzj015tvd1skx4bgg1v",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhfvvtx00uzvd1so054a77h",
+          "url": "http://news.chengdu.cn/2026/0316/69b807c63a56c94052c41f78.shtml",
+          "title": "市政府党组（扩大）会议召开 传达学习全国两会精神 研究贯彻落实举措_本地_红星新闻网",
+          "publishTime": "2026-03-16T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0uzz007xvdsod1sr68ha",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-14T00:00:00.000Z",
+    "normalizedTitle": "市政府党组学习贯彻全国两会精神 姚高员讲话",
+    "summary": "会议指出，这次全国两会是在十四五收官、十五五开局的关键时期召开的重要会议。习近平总书记在全国两会期间发表的重要讲话，为我们做好今年工作提供了根本遵循和行动指南",
+    "eventType": "MEETING",
+    "locationText": "十四五收官、十五五开局的关键时期",
+    "keywordsJson": "[\"市政府党组学习贯彻全国两会精神\",\"姚高员讲话\",\"会议指出\",\"这次全国两会是在十四五收官\",\"十五五开局的关键时期召开的重要会议。习近平总书记在全国两会期间发表的重要讲话\",\"为我们做好今年工作提供了根本遵循和行动指南\"]",
+    "confidenceScore": 0.8700000000000001,
+    "dedupKey": "e6d11262d5b1022a7bfd33b5d7e50193a11f603e",
+    "leaders": [
+      {
+        "id": "cmnhh0v7x007zvdso7rhxhazo",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0vfv0081vdsosavdgap8",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhh03yy004fvdso5jdh83eo",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9191056.htm",
+          "title": "市政府党组学习贯彻全国两会精神 姚高员讲话",
+          "publishTime": "2026-03-14T00:00:00.000Z",
+          "sourceName": "杭州发布",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0g3i0065vdsoe8yewfap",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-14T00:00:00.000Z",
+    "normalizedTitle": "市领导参加义务植树活动 刘非姚高员暨军民王文序马小秋参加",
+    "summary": "首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论 时政要闻/领导重要讲话/人事任免/公告公示 所在位置： 杭州网>杭州新闻中心>杭州新政>刘非报道集 市领导参加义务植树活动 刘非姚高员暨军民王文序马小秋参加 杭州网 发布时间：2026-03-14 07:13 13日，省委常委、市委书记刘非，市委副书记、市长姚高员，市人大常委会主任暨军民，市政协主席王文序，市委副书记马小秋等市领导来到萧山区湘湖湘花岛，带头参加义务植树活动。仲春时节，万物复苏，一派生机勃勃的景象",
+    "eventType": "ATTENDANCE",
+    "locationText": null,
+    "keywordsJson": "[\"市领导参加义务植树活动\",\"刘非姚高员暨军民王文序马小秋参加\",\"首页|原创|杭州新闻|华媒视频|杭网议事厅|杭州房产|汽车|图库|舆情|区县|评论\",\"时政要闻/领导重要讲话/人事任免/公告公示\",\"所在位置\",\"杭州网>杭州新闻中心>杭州新政>刘非报道集\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "293dcb698610b6ef4fc518fbf9544fc3910f1e8c",
+    "leaders": [
+      {
+        "id": "cmnhh0gbv0067vdso6q7l81cg",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmnhh0glr0069vdso307x13uv",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0gu5006bvdsovqrmh5zx",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgzdx1002vvdsozjd0989i",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9191055.htm",
+          "title": "市领导参加义务植树活动 刘非姚高员暨军民王文序马小秋参加",
+          "publishTime": "2026-03-14T00:00:00.000Z",
+          "sourceName": "杭州发布",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhg22yo0167vd1sdreqjzrk",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-14T00:00:00.000Z",
+    "normalizedTitle": "市委常委会召开扩大会议 专题传达学习全国两会精神 研究成都贯彻落实举措",
+    "summary": "3月14日，市委常委会召开扩大会议，专题传达学习全国两会精神，以及省委常委会（扩大）会议精神，研究成都贯彻落实举措。省委常委、市委书记曹立军主持会议并讲话",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"市委常委会召开扩大会议\",\"专题传达学习全国两会精神\",\"研究成都贯彻落实举措_本地_红星新闻网\",\"3月14日\",\"以及省委常委会（扩大）会议精神\",\"研究成都贯彻落实举措。省委常委\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "480a2ad1425b564f5eb6008cd680913b7d4bc5a5",
+    "leaders": [
+      {
+        "id": "cmnhg23fg0169vd1sab44uu46",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhg23yh016bvd1se3e23kf3",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhfws9i00wtvd1s1a2n29hw",
+          "url": "http://news.chengdu.cn/2026/0314/69b52d2ff34d440475d4b364.shtml",
+          "title": "市委常委会召开扩大会议 专题传达学习全国两会精神 研究成都贯彻落实举措_本地_红星新闻网",
+          "publishTime": "2026-03-14T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0f1s005zvdsoneicxio4",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-13T00:00:00.000Z",
+    "normalizedTitle": "市委召开全市领导干部会议 传达学习贯彻习近平总书记重要讲话和全国两会精神 刘非主持并讲话",
+    "summary": "3月13日，市委召开全市领导干部会议，省委常委、市委书记刘非主持并讲话。13日，市委召开全市领导干部会议，传达学习习近平总书记重要讲话和全国两会精神，部署我市学习贯彻工作",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"市委召开全市领导干部会议\",\"传达学习贯彻习近平总书记重要讲话和全国两会精神\",\"刘非主持并讲话\",\"3月13日\",\"省委常委\",\"市委书记刘非主持并讲话。13日\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "209b9c52fd43ac32d2fbcc419990512b6a69c3e8",
+    "leaders": [
+      {
+        "id": "cmnhh0f8n0061vdsof87lwwhk",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0fg30063vdsov0e4i6f7",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgzbdo002tvdso2hehulpr",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9191053.htm",
+          "title": "市委召开全市领导干部会议 传达学习贯彻习近平总书记重要讲话和全国两会精神 刘非主持并讲话",
+          "publishTime": "2026-03-14T00:00:00.000Z",
+          "sourceName": "杭州发布",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0h7p006dvdso34zkdz73",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-03T00:00:00.000Z",
+    "normalizedTitle": "市委常委会召开会议 刘非主持",
+    "summary": "会议强调，要认真学习贯彻习近平总书记在中共中央政治局会议讨论十五五规划纲要草案和政府工作报告时的重要讲话精神，一体学习贯彻习近平总书记考察浙江重要讲话精神和对杭州工作的重要指示批示精神，牢固树立和践行正确政绩观，深入践行八八战略，聚焦聚力落实总书记4+1重要要求和省委132总体工作部署，锚定我市十五五时期总目标和七个重大突破着力点，抓好十五五规划实施和今年工作任务落实，有力推动杭州经济社会高质量发展，确保基本建成世界一流的社会主义现代化国际大都市取得决定性进展，在全省高质量发展建设共同富裕示范区中发挥龙头领跑示范带动作用，以实际行动坚定拥护两个确立、坚决做到两个维护。当前要抓好一季度各项工作，咬定目标不放松，全力推动复工复产，抓好重大项目开工建设，推动新建项目尽快开工、续建项目加快放量，密切关注国际形势变化，做好对外经贸工作，全力争取和用好相关政策、改革试点，抓好元宵节促消费活动，扎实做好安全生产等工作，切实维护社会大局和谐稳定",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"市委常委会召开会议\",\"刘非主持\",\"会议强调\",\"要认真学习贯彻习近平总书记在中共中央政治局会议讨论十五五规划纲要草案和政府工作报告时的重要讲话精神\",\"一体学习贯彻习近平总书记考察浙江重要讲话精神和对杭州工作的重要指示批示精神\",\"牢固树立和践行正确政绩观\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "a1f2a0aab788a23f3d9b95138fa18f8c2383f778",
+    "leaders": [
+      {
+        "id": "cmnhh0hei006fvdsoy4dj46qa",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnheb9ge000yvdjsxi6qgzfw",
+          "name": "刘非",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "杭州市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0hn4006hvdsomf7s22fr",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhgzf99002xvdso7m4y4qi6",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/lf/content/content_9185445.htm",
+          "title": "市委常委会召开会议 刘非主持",
+          "publishTime": "2026-03-03T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmnhh0w1d0083vdsorygdg8ae",
+    "region": {
+      "code": "hangzhou",
+      "name": "杭州",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-02T00:00:00.000Z",
+    "normalizedTitle": "姚高员主持召开市政府党组（扩大）会议和常务会议 切实把树立和践行正确政绩观学习教育成果转化为推动高质量发展的成效",
+    "summary": "3月2日，市长姚高员主持召开市政府党组（扩大）会议和常务会议，认真学习贯彻习近平总书记关于树立和践行正确政绩观学习教育的重要讲话和重要指示精神，全面落实中央、省委和市委党的建设工作领导小组会议部署要求，扎实做好全市政府系统学习教育工作。会议强调，要进一步提高政治站位，深刻领会学习教育的重大意义，坚决把思想和行动统一到党中央开展学习教育的决策部署上来，牢牢把握立党为公、为民造福、科学决策、真抓实干的总要求，切实增强对标看齐笃行的政治自觉、思想自觉、行动自觉，一体推进学查改，推动正确政绩观内化于心、外化于行",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"姚高员主持召开市政府党组（扩大）会议和常务会议\",\"切实把树立和践行正确政绩观学习教育成果转化为推动高质量发展的成效\",\"3月2日\",\"市长姚高员主持召开市政府党组（扩大）会议和常务会议\",\"认真学习贯彻习近平总书记关于树立和践行正确政绩观学习教育的重要讲话和重要指示精神\",\"全面落实中央\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "d25b3057bebfd65196da26602d418b28753fd223",
+    "leaders": [
+      {
+        "id": "cmnhh0wjv0085vdsowgcfc0m0",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmnheb9sh0010vdjstiu4uvrk",
+          "name": "姚高员",
+          "roleType": "MAYOR",
+          "officialTitle": "杭州市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmnhh0ws20087vdsoxd2yf6hb",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmnhh04x0004hvdsokcf1yhzo",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/ygy/content/content_9185444.htm",
+          "title": "姚高员主持召开市政府党组（扩大）会议和常务会议 切实把树立和践行正确政绩观学习教育成果转化为推动高质量发展的成效",
+          "publishTime": "2026-03-03T00:00:00.000Z",
+          "sourceName": "杭州日报",
+          "sourceDomain": "hznews.hangzhou.com.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "杭州网主站",
+            "baseDomain": "hangzhou.com.cn"
           }
         }
       }

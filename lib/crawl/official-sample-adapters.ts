@@ -43,6 +43,16 @@ function buildNumericPageUrls(baseUrl: string, startPage: number, endPage: numbe
   return urls;
 }
 
+function buildNodePageUrls(baseUrl: string, count: number) {
+  const urls = [baseUrl];
+
+  for (let page = 2; page <= count; page += 1) {
+    urls.push(baseUrl.replace(/\.html$/i, `_${page}.html`));
+  }
+
+  return urls;
+}
+
 async function fetchText(url: string) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 30_000);
@@ -313,14 +323,28 @@ async function collectSichuan(input: RegionInput) {
 async function collectChengdu(input: RegionInput) {
   return collectFromPagedList({
     pageUrls: [
-      ...buildNumericPageUrls("http://news.chengdu.cn/xwsy/bd/{page}.shtml", 1, 12),
-      ...buildNumericPageUrls("http://news.chengdu.cn/xwsy/yc/{page}.shtml", 1, 3)
+      ...buildNumericPageUrls("http://news.chengdu.cn/xwsy/bd/{page}.shtml", 1, 18),
+      ...buildNumericPageUrls("http://news.chengdu.cn/xwsy/yc/{page}.shtml", 1, 5)
     ],
     leaderNames: input.leaderNames,
     start: input.start,
     end: input.end,
     requireLeaderInTitle: false,
-    titleKeywords: ["陈书平", "市长", "市政府", "政府常务会议", "政府党组会议", "市政府第"]
+    titleKeywords: ["陈书平", "曹立军", "市委书记", "市长", "市委常委会", "市政府", "政府常务会议", "政府党组会议", "市政府第"]
+  });
+}
+
+async function collectHangzhou(input: RegionInput) {
+  return collectFromPagedList({
+    pageUrls: [
+      ...buildNodePageUrls("https://hznews.hangzhou.com.cn/xinzheng/lf/node_210646.html", 2),
+      ...buildNodePageUrls("https://hznews.hangzhou.com.cn/xinzheng/ygy/node_207280.html", 2)
+    ],
+    leaderNames: input.leaderNames,
+    start: input.start,
+    end: input.end,
+    requireLeaderInTitle: false,
+    titleKeywords: ["刘非", "姚高员", "市委常委会", "市政府党组", "市政府", "市长", "市委书记"]
   });
 }
 
@@ -330,7 +354,8 @@ const REGION_ADAPTERS: Record<string, (input: RegionInput) => Promise<OfficialCa
   zhejiang: collectZhejiang,
   hubei: collectHubei,
   sichuan: collectSichuan,
-  chengdu: collectChengdu
+  chengdu: collectChengdu,
+  hangzhou: collectHangzhou
 };
 
 export async function collectOfficialCandidates(input: RegionInput) {

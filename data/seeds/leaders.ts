@@ -30,6 +30,8 @@ export const LEADER_SEEDS: LeaderSeed[] = [
   { regionCode: "jiangsu", name: "刘小涛", roleType: "GOVERNOR", officialTitle: "江苏省省长", normalizedTitle: "省长", aliases: ["省长"] },
   { regionCode: "zhejiang", name: "王浩", roleType: "PARTY_SECRETARY", officialTitle: "浙江省委书记", normalizedTitle: "党委书记", aliases: ["书记"] },
   { regionCode: "zhejiang", name: "刘捷", roleType: "GOVERNOR", officialTitle: "浙江省省长", normalizedTitle: "省长", aliases: ["省长"] },
+  { regionCode: "hangzhou", name: "刘非", roleType: "PARTY_SECRETARY", officialTitle: "杭州市委书记", normalizedTitle: "党委书记", aliases: ["书记"] },
+  { regionCode: "hangzhou", name: "姚高员", roleType: "MAYOR", officialTitle: "杭州市市长", normalizedTitle: "市长", aliases: ["市长"] },
   { regionCode: "anhui", name: "梁言顺", roleType: "PARTY_SECRETARY", officialTitle: "安徽省委书记", normalizedTitle: "党委书记", aliases: ["书记"] },
   { regionCode: "anhui", name: "王清宪", roleType: "GOVERNOR", officialTitle: "安徽省省长", normalizedTitle: "省长", aliases: ["省长"] },
   { regionCode: "fujian", name: "周祖翼", roleType: "PARTY_SECRETARY", officialTitle: "福建省委书记", normalizedTitle: "党委书记", aliases: ["书记"] },

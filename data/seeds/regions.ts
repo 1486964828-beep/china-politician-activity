@@ -19,6 +19,7 @@ export const REGION_SEEDS: RegionSeed[] = [
   { code: "shanghai", name: "上海", type: "MUNICIPALITY", govDomain: "shanghai.gov.cn" },
   { code: "jiangsu", name: "江苏", type: "PROVINCE", govDomain: "jiangsu.gov.cn" },
   { code: "zhejiang", name: "浙江", type: "PROVINCE", govDomain: "zj.gov.cn" },
+  { code: "hangzhou", name: "杭州", level: "CITY", type: "CITY", govDomain: "hangzhou.gov.cn", parentCode: "zhejiang" },
   { code: "anhui", name: "安徽", type: "PROVINCE", govDomain: "ah.gov.cn" },
   { code: "fujian", name: "福建", type: "PROVINCE", govDomain: "fujian.gov.cn" },
   { code: "jiangxi", name: "江西", type: "PROVINCE", govDomain: "jiangxi.gov.cn" },
