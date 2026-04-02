@@ -1,4 +1,5 @@
 import { load } from "cheerio";
+import iconv from "iconv-lite";
 import { chromium } from "playwright";
 
 import { MOCK_ARTICLE_FIXTURES } from "../../data/mock/fixtures";
@@ -42,6 +43,8 @@ function extractSourceName($: ReturnType<typeof load>) {
     $('meta[name="SiteName"]').attr("content");
   const candidates = [
     metaSource,
+    $(".con-source a").first().text(),
+    $(".main-fl #main a").filter((_, element) => $(element).text().includes("日报") || $(element).text().includes("新闻网")).first().text(),
     $(".laiyuan").first().text(),
     $(".hbgov-article-meta").first().text(),
     $(".source").first().text(),
@@ -77,6 +80,7 @@ function stripNoiseFromScope($: ReturnType<typeof load>, selector: string) {
 function normalizeBodyText(text: string) {
   return cleanText(
     text
+      .replace(/^.*?(?:打开微信，点击底部的发现，使用扫一扫即可将网页分享。)/, " ")
       .replace(/编辑[:：][^\n。]{0,40}/g, " ")
       .replace(/责编[:：][^\n。]{0,40}/g, " ")
       .replace(/审核[:：][^\n。]{0,40}/g, " ")
@@ -86,6 +90,9 @@ function normalizeBodyText(text: string) {
 
 function extractBodyText($: ReturnType<typeof load>) {
   const selectors = [
+    ".box-main .main-fl #main > div",
+    ".main-fl #main > div",
+    "#main > div",
     ".hbgov-article-content .view",
     ".hbgov-article-content",
     "#zoom",
@@ -142,6 +149,14 @@ function extractPublishTime($: ReturnType<typeof load>, text: string) {
   return parseChineseDateHint(`${timeHint} ${text}`);
 }
 
+function decodeHtml(buffer: Buffer, encoding: string) {
+  if (encoding.includes("gb") || encoding.includes("gbk") || encoding.includes("gb2312")) {
+    return iconv.decode(buffer, "gb18030");
+  }
+
+  return buffer.toString("utf8");
+}
+
 async function fetchHtmlByHttp(url: string) {
   const response = await fetch(url, {
     redirect: "follow",
@@ -158,12 +173,7 @@ async function fetchHtmlByHttp(url: string) {
   const buffer = Buffer.from(await response.arrayBuffer());
   const utf8Html = buffer.toString("utf8");
   const encoding = detectEncoding(utf8Html);
-
-  if (encoding.includes("gb") || encoding.includes("gbk") || encoding.includes("gb2312")) {
-    throw new Error(`Unsupported legacy encoding detected: ${encoding}`);
-  }
-
-  return utf8Html;
+  return decodeHtml(buffer, encoding);
 }
 
 export async function fetchArticleByUrl(url: string): Promise<ArticleFetchResult> {

@@ -7,7 +7,7 @@ import { fetchArticleByUrl } from "../lib/pipeline/article-fetcher";
 import { runDeduplication } from "../lib/pipeline/dedup";
 import { extractEventDraft } from "../lib/pipeline/extract-event";
 import { matchSourceForRegion } from "../lib/pipeline/source-matcher";
-import { getArgValue } from "../lib/utils/args";
+import { getArgValue, hasFlag } from "../lib/utils/args";
 import { formatIsoDate } from "../lib/utils/dates";
 import { sha1 } from "../lib/utils/hash";
 import { parseJsonArray } from "../lib/utils/json";
@@ -16,6 +16,21 @@ const SAMPLE_REGION_CODES = ["beijing", "guangdong", "zhejiang", "hubei", "sichu
 
 function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function buildReportFileName(input: {
+  start: string;
+  end: string;
+  targetRegions: string[];
+  roleArg?: string | null;
+}) {
+  if (input.targetRegions.length === SAMPLE_REGION_CODES.length && !input.roleArg) {
+    return "sample-official-report.json";
+  }
+
+  const regionPart = input.targetRegions.join("-");
+  const rolePart = input.roleArg ? `.${input.roleArg}` : "";
+  return `sample-official-report.${regionPart}${rolePart}.${input.start}.${input.end}.json`;
 }
 
 function withinRange(date: Date, start: string, end: string) {
@@ -27,14 +42,31 @@ async function main() {
   const start = getArgValue("--start", "2026-03-20")!;
   const end = getArgValue("--end", "2026-03-31")!;
   const regionArg = getArgValue("--regions");
+  const leaderArg = getArgValue("--leader");
+  const roleArg = getArgValue("--role");
+  const reset = hasFlag("--reset");
   const targetRegions = regionArg ? regionArg.split(",").map((item) => item.trim()).filter(Boolean) : SAMPLE_REGION_CODES;
+  const eventLeaderWhere = leaderArg || roleArg
+    ? {
+        leaders: {
+          some: {
+            leader: {
+              ...(leaderArg ? { name: leaderArg } : {}),
+              ...(roleArg ? { roleType: roleArg as never } : {})
+            }
+          }
+        }
+      }
+    : {};
 
-  await prisma.eventSource.deleteMany();
-  await prisma.eventLeader.deleteMany();
-  await prisma.event.deleteMany();
-  await prisma.rawArticle.deleteMany();
-  await prisma.candidateUrl.deleteMany();
-  await prisma.searchTask.deleteMany();
+  if (reset) {
+    await prisma.eventSource.deleteMany();
+    await prisma.eventLeader.deleteMany();
+    await prisma.event.deleteMany();
+    await prisma.rawArticle.deleteMany();
+    await prisma.candidateUrl.deleteMany();
+    await prisma.searchTask.deleteMany();
+  }
 
   const regions = await prisma.region.findMany({
     where: {
@@ -45,7 +77,9 @@ async function main() {
     include: {
       leaders: {
         where: {
-          active: true
+          active: true,
+          ...(leaderArg ? { name: leaderArg } : {}),
+          ...(roleArg ? { roleType: roleArg as never } : {})
         }
       },
       sourceSites: {
@@ -63,15 +97,30 @@ async function main() {
   let candidateCount = 0;
 
   for (const region of regions) {
-    const task = await prisma.searchTask.create({
-      data: {
-        regionId: region.id,
-        searchDate: new Date(`${start}T00:00:00.000Z`),
-        queryText: `official-adapter:${region.code}:${start}:${end}`,
-        engine: "official-adapter",
-        status: "PENDING"
-      }
-    });
+    if (region.leaders.length === 0) {
+      continue;
+    }
+
+    const taskQueryText = `official-adapter:${region.code}:${start}:${end}:${leaderArg ?? "all"}:${roleArg ?? "all"}`;
+    const taskDate = new Date(`${start}T00:00:00.000Z`);
+    const task =
+      (await prisma.searchTask.findFirst({
+        where: {
+          regionId: region.id,
+          searchDate: taskDate,
+          queryText: taskQueryText,
+          engine: "official-adapter"
+        }
+      })) ??
+      (await prisma.searchTask.create({
+        data: {
+          regionId: region.id,
+          searchDate: taskDate,
+          queryText: taskQueryText,
+          engine: "official-adapter",
+          status: "PENDING"
+        }
+      }));
 
     searchTaskCount += 1;
 
@@ -129,12 +178,8 @@ async function main() {
       }
 
       await prisma.searchTask.update({
-        where: {
-          id: task.id
-        },
-        data: {
-          status: "COMPLETED"
-        }
+        where: { id: task.id },
+        data: { status: "COMPLETED" }
       });
     } catch (error) {
       console.error(`Official discovery failed for ${region.code}`, error);
@@ -170,13 +215,11 @@ async function main() {
   let fetched = 0;
 
   for (const candidate of candidates) {
-    const existing = await prisma.rawArticle.findUnique({
-      where: {
-        url: candidate.url
-      }
-    });
+      const existing = await prisma.rawArticle.findUnique({
+        where: { url: candidate.url }
+      });
 
-    if (!existing) {
+      if (!existing) {
       try {
         const article = await fetchArticleByUrl(candidate.url);
         const sourceDomain = article.sourceDomain ?? candidate.domain;
@@ -215,6 +258,11 @@ async function main() {
         });
         continue;
       }
+    } else if (!existing.candidateUrlId) {
+      await prisma.rawArticle.update({
+        where: { id: existing.id },
+        data: { candidateUrlId: candidate.id }
+      });
     }
 
     await prisma.candidateUrl.update({
@@ -242,6 +290,20 @@ async function main() {
   let extracted = 0;
 
   for (const article of rawArticles) {
+    const linkedSource = await prisma.eventSource.findFirst({
+      where: {
+        rawArticleId: article.id
+      }
+    });
+
+    if (linkedSource) {
+      await prisma.rawArticle.update({
+        where: { id: article.id },
+        data: { articleStatus: "EXTRACTED" }
+      });
+      continue;
+    }
+
     const draft = await extractEventDraft(article.id);
 
     if (draft.leaders.length === 0 || !withinRange(draft.eventDate, start, end)) {
@@ -326,6 +388,18 @@ async function main() {
         orderBy: [{ isPrimary: "desc" }, { createdAt: "asc" }]
       }
     },
+    where: {
+      eventDate: {
+        gte: new Date(`${start}T00:00:00.000Z`),
+        lte: new Date(`${end}T23:59:59.999Z`)
+      },
+      region: {
+        code: {
+          in: targetRegions
+        }
+      },
+      ...eventLeaderWhere
+    },
     orderBy: [{ eventDate: "asc" }, { regionId: "asc" }, { createdAt: "asc" }]
   });
 
@@ -349,7 +423,19 @@ async function main() {
 
   const outputDir = join(process.cwd(), "data", "generated");
   mkdirSync(outputDir, { recursive: true });
-  writeFileSync(join(outputDir, "sample-official-report.json"), JSON.stringify(report, null, 2), "utf8");
+  writeFileSync(
+    join(
+      outputDir,
+      buildReportFileName({
+        start,
+        end,
+        targetRegions,
+        roleArg
+      })
+    ),
+    JSON.stringify(report, null, 2),
+    "utf8"
+  );
 
   console.log(
     JSON.stringify(
@@ -375,4 +461,3 @@ main().catch(async (error) => {
   await prisma.$disconnect();
   process.exit(1);
 });
-

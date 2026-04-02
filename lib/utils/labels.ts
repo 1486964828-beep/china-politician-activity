@@ -32,5 +32,6 @@ export const roleTypeLabels: Record<LeaderRoleType, string> = {
 export const regionTypeLabels: Record<RegionType, string> = {
   PROVINCE: "省",
   AUTONOMOUS_REGION: "自治区",
-  MUNICIPALITY: "直辖市"
+  MUNICIPALITY: "直辖市",
+  CITY: "地级市"
 };

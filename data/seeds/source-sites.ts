@@ -12,12 +12,12 @@ export type SourceSiteSeed = {
 
 const REGION_GOV_SITES: SourceSiteSeed[] = REGION_SEEDS.map((region) => ({
   regionCode: region.code,
-  siteName: `${region.name}省级政府门户`,
+  siteName: region.level === "CITY" ? `${region.name}市政府门户` : `${region.name}省级政府门户`,
   baseDomain: region.govDomain,
   sourceType: "GOVERNMENT",
   credibilityLevel: "A",
   enabled: true,
-  notes: "MVP 默认启用的省级政府主站白名单。"
+  notes: region.level === "CITY" ? "MVP 默认启用的市级政府主站白名单。" : "MVP 默认启用的省级政府主站白名单。"
 }));
 
 const EXTRA_MEDIA_SITES: SourceSiteSeed[] = [
@@ -65,6 +65,33 @@ const EXTRA_MEDIA_SITES: SourceSiteSeed[] = [
     credibilityLevel: "B",
     enabled: true,
     notes: "四川地区官方媒体补充源。"
+  },
+  {
+    regionCode: "chengdu",
+    siteName: "红星新闻网",
+    baseDomain: "news.chengdu.cn",
+    sourceType: "OFFICIAL_MEDIA",
+    credibilityLevel: "B",
+    enabled: true,
+    notes: "成都本地党媒新闻门户，市长活动报道高频来源。"
+  },
+  {
+    regionCode: "chengdu",
+    siteName: "成都全搜索",
+    baseDomain: "chengdu.cn",
+    sourceType: "OFFICIAL_MEDIA",
+    credibilityLevel: "B",
+    enabled: true,
+    notes: "成都全搜索主站及专题页补充源。"
+  },
+  {
+    regionCode: "chengdu",
+    siteName: "看度新闻",
+    baseDomain: "cdtv.cn",
+    sourceType: "OFFICIAL_MEDIA",
+    credibilityLevel: "B",
+    enabled: true,
+    notes: "成都广播电视台融媒体平台补充源。"
   }
 ];
 

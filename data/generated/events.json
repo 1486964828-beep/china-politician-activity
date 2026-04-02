@@ -1,5 +1,155 @@
 [
   {
+    "id": "cmngyjqv400ehvdzkreyitg08",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-31T00:00:00.000Z",
+    "normalizedTitle": "周德强任中共成都市青羊区委书记_本地_红星新闻网",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 财经成都 成都河长 成都教育 爱看视频 爱看短剧 爱看萌宠 更多 爱看短剧 爱看萌宠 周德强任中共成都市青羊区委书记 2026-03-31 16:47 来源： 成都日报 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。3月31日下午，成都市青羊区召开领导干部大会，宣布省委、市委决定",
+    "eventType": "OTHER",
+    "locationText": null,
+    "keywordsJson": "[\"周德强任中共成都市青羊区委书记_本地_红星新闻网\",\"成都头条\",\"原创\",\"本地\",\"国内\",\"头条智造\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "3d1bae10adc4652dfb07458e95c97ebb319bdc6d",
+    "leaders": [
+      {
+        "id": "cmngyjr4s00ejvdzkyg5fizms",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyjrf900elvdzko7cn7d6z",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngv9jlf00elvdikulm1ksgm",
+          "url": "http://news.chengdu.cn/2026/0331/69cb8a173a56c94052c6ed40.shtml",
+          "title": "周德强任中共成都市青羊区委书记_本地_红星新闻网",
+          "publishTime": "2026-03-31T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6ukog004pvdj424421tox",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-31T00:00:00.000Z",
+    "normalizedTitle": "王晓晖部署经济工作",
+    "summary": "四川省贸促会第六次代表大会召开 2026年03月31日 07时37分 来源: 四川日报 3月30日，四川省贸促会第六次代表大会在成都召开。省委副书记、政法委书记于立军，中国贸促会党组成员、副会长陈建安出席并讲话",
+    "eventType": "ECONOMIC_WORK",
+    "locationText": "成都",
+    "keywordsJson": "[\"四川省贸促会第六次代表大会召开\",\"2026年03月31日\",\"07时37分\",\"来源:\",\"四川日报\",\"3月30日\"]",
+    "confidenceScore": 0.9500000000000002,
+    "dedupKey": "59ffab6c670105bc53724e7f4da225955ebc2544",
+    "leaders": [
+      {
+        "id": "cmng6ukxx004rvdj4xj4ifczk",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnfqin45003cvdnc82n2vnnn",
+          "name": "王晓晖",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "四川省委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6ul5e004tvdj4q5ugsnzi",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6tuw7002fvdj4uc5896fe",
+          "url": "http://www.sc.gov.cn/10462/c110424gtn/2026/3/31/624944d28943433ab1b7543e59b2bc5e.shtml",
+          "title": "四川省贸促会第六次代表大会召开",
+          "publishTime": "2026-03-31T00:03:41.000Z",
+          "sourceName": "四川日报",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6ujo4004jvdj4uezt1rlg",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-31T00:00:00.000Z",
+    "normalizedTitle": "施小琳出席重要活动",
+    "summary": "我省举行攀西特高压交流工程建设动员会 构建省内三送三受特高压骨干网架 2026年03月31日 07时39分 来源: 四川日报 3月30日，攀西特高压交流工程建设动员会举行，副省长任京东在成都主会场出席并致辞。攀西特高压交流工程是2026年度省委、省政府攻坚任务事项，也是十五五时期国家电网首个开工的特高压交流输变电工程",
+    "eventType": "ATTENDANCE",
+    "locationText": "成都主会场",
+    "keywordsJson": "[\"我省举行攀西特高压交流工程建设动员会\",\"构建省内三送三受特高压骨干网架\",\"2026年03月31日\",\"07时39分\",\"来源:\",\"四川日报\"]",
+    "confidenceScore": 0.9500000000000002,
+    "dedupKey": "3ebd323b6f461b971fb9325c4473aeafa7269861",
+    "leaders": [
+      {
+        "id": "cmng6ujx8004lvdj4fzh82zck",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6uk56004nvdj49jxd80yb",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6tu5m002dvdj4xw43bd4w",
+          "url": "http://www.sc.gov.cn/10462/c110424gtn/2026/3/31/dbe007c81e284cf48fbbb752b3b65a49.shtml",
+          "title": "我省举行攀西特高压交流工程建设动员会 构建省内三送三受特高压骨干网架",
+          "publishTime": "2026-03-31T00:27:04.000Z",
+          "sourceName": "四川日报",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmng2dh1u00mbvd5ggg1pbrby",
     "region": {
       "code": "zhejiang",
@@ -361,6 +511,106 @@
     ]
   },
   {
+    "id": "cmngyjsnm00etvdzkt07gun01",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-30T00:00:00.000Z",
+    "normalizedTitle": "曹立军在12345热线接听中心调研",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 财经成都 成都河长 成都教育 爱看视频 爱看短剧 爱看萌宠 更多 爱看短剧 爱看萌宠 曹立军调研成都12345热线平台 2026-03-30 17:04 来源： 成都日报 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。3月30日，省委常委、市委书记曹立军调研成都12345热线平台",
+    "eventType": "RESEARCH",
+    "locationText": "12345热线接听中心",
+    "keywordsJson": "[\"曹立军调研成都12345热线平台_本地_红星新闻网\",\"成都头条\",\"原创\",\"本地\",\"国内\",\"头条智造\"]",
+    "confidenceScore": 0.8700000000000001,
+    "dedupKey": "f8d44219cdf31a7ed711531497d962dfb7765c1f",
+    "leaders": [
+      {
+        "id": "cmngyjsuu00evvdzksp4u025p",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyjt1t00exvdzkvpulmba1",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngv9ye400flvdikv5zl2zbn",
+          "url": "http://news.chengdu.cn/2026/0330/69ca3c703a56c94052c6b26e.shtml",
+          "title": "曹立军调研成都12345热线平台_本地_红星新闻网",
+          "publishTime": "2026-03-30T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmngyjrub00envdzkf8njyz8e",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-30T00:00:00.000Z",
+    "normalizedTitle": "陈书平调研",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 财经成都 成都河长 成都教育 爱看视频 爱看短剧 爱看萌宠 更多 爱看短剧 爱看萌宠 立足资源禀赋和特色优势 持续推进文商旅体深度融合发展 2026-03-31 10:31 来源： 成都日报 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。3月30日，市委副书记、市长陈书平赴都江堰市了解当地经济社会发展情况、实地调研文化旅游产业链时强调，要深入学习贯彻习近平总书记关于文化和旅游工作的重要论述，认真落实党中央、国务院决策部署，以及省委、省政府和市委、市政府工作要求，立足资源禀赋和特色优势，着力以文塑旅、以旅彰文，持续丰富供给、升级业态、焕新场景，深化文旅+百业百业+文旅，加快推进文商旅体深度融合发展，更好服务人民群众美好生活、支撑全市经济社会高质量发展",
+    "eventType": "RESEARCH",
+    "locationText": null,
+    "keywordsJson": "[\"立足资源禀赋和特色优势\",\"持续推进文商旅体深度融合发展_本地_红星新闻网\",\"成都头条\",\"原创\",\"本地\",\"国内\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "91ef03b29f6e0599b00db68fe2776389517758bb",
+    "leaders": [
+      {
+        "id": "cmngyjrzt00epvdzk5k5tc6ul",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyjs7p00ervdzk7te7m57n",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngv9u0l00fbvdik57ub8q8r",
+          "url": "http://news.chengdu.cn/2026/0331/69cb31e63a56c94052c6d7d0.shtml",
+          "title": "立足资源禀赋和特色优势 持续推进文商旅体深度融合发展_本地_红星新闻网",
+          "publishTime": "2026-03-31T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmng2dhye00mhvd5g70ne8x1r",
     "region": {
       "code": "zhejiang",
@@ -611,6 +861,56 @@
     ]
   },
   {
+    "id": "cmng6ultg004vvdj4fzm4sslh",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-29T00:00:00.000Z",
+    "normalizedTitle": "施小琳在成都调研",
+    "summary": "任京东会见安利全球总裁兼首席执行官迈克尔·尼尔森一行 2026年03月29日 08时20分 来源: 四川日报 3月27日，副省长任京东在成都会见安利全球总裁兼首席执行官迈克尔·尼尔森一行。双方就安利（中国）中草药有机农场项目尽快建设、投产达效，推动安利在川布局生产加工基地，引领带动产业链企业来川投资考察等交换了意见",
+    "eventType": "RESEARCH",
+    "locationText": "成都",
+    "keywordsJson": "[\"任京东会见安利全球总裁兼首席执行官迈克尔·尼尔森一行\",\"2026年03月29日\",\"08时20分\",\"来源:\",\"四川日报\",\"3月27日\"]",
+    "confidenceScore": 0.9500000000000002,
+    "dedupKey": "6153643b63eaa2bee31f6f81e6f3f9a3a61b8e3e",
+    "leaders": [
+      {
+        "id": "cmng6um48004xvdj4ofbcs1rp",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6umaw004zvdj4f442lfov",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6tvpc002hvdj4cx6ugmpa",
+          "url": "http://www.sc.gov.cn/10462/c110424gtn/2026/3/29/e327e1035abf4564bdf6d49ae23c55a1.shtml",
+          "title": "任京东会见安利全球总裁兼首席执行官迈克尔·尼尔森一行",
+          "publishTime": "2026-03-30T07:21:29.000Z",
+          "sourceName": "四川日报",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmng2cax400fpvd5guitskyzq",
     "region": {
       "code": "beijing",
@@ -661,6 +961,106 @@
     ]
   },
   {
+    "id": "cmngyjt8k00ezvdzkvudn6vqd",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-28T00:00:00.000Z",
+    "normalizedTitle": "曹立军主持召开重要会议",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 财经成都 成都河长 成都教育 爱看视频 爱看短剧 爱看萌宠 更多 爱看短剧 爱看萌宠 市委常委会召开会议 传达学习习近平总书记有关重要讲话精神 研究成都贯彻落实举措 2026-03-28 12:16 来源： 成都日报 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。3月28日，市委常委会召开会议，传达学习习近平总书记有关重要讲话精神，以及省委常委会会议精神，研究成都贯彻落实举措",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"市委常委会召开会议\",\"传达学习习近平总书记有关重要讲话精神\",\"研究成都贯彻落实举措_本地_红星新闻网\",\"成都头条\",\"原创\",\"本地\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "c607e73b7baa5584bbf25bd23be727e975854662",
+    "leaders": [
+      {
+        "id": "cmngyjtef00f1vdzk39djpj1b",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyjtk500f3vdzk9vw7jgnf",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngvaua100hfvdiklb3hm5q7",
+          "url": "http://news.chengdu.cn/2026/0328/69c74d883a56c94052c65d09.shtml",
+          "title": "市委常委会召开会议 传达学习习近平总书记有关重要讲话精神 研究成都贯彻落实举措_本地_红星新闻网",
+          "publishTime": "2026-03-28T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6umr70051vdj4790z87cv",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-28T00:00:00.000Z",
+    "normalizedTitle": "施小琳主持召开重要会议",
+    "summary": "省政府领导与民营企业月月见活动举行 推进医药健康产业高质量发展 2026年03月28日 08时47分 来源: 四川日报 3月26日，省政府领导与民营企业月月见医药健康政企交流专场活动在省民营经济发展促进中心举行。副省长任京东带领省直有关部门和相关市（州）负责人与来自医药健康产业链的10家民营企业代表座谈交流，面对面倾听心声，协调解决困难问题",
+    "eventType": "MEETING",
+    "locationText": "省民营经济发展促进中心",
+    "keywordsJson": "[\"省政府领导与民营企业月月见活动举行\",\"推进医药健康产业高质量发展\",\"2026年03月28日\",\"08时47分\",\"来源:\",\"四川日报\"]",
+    "confidenceScore": 0.9500000000000002,
+    "dedupKey": "7d0b981fcff441ea41f234ff858ba0f2f431d71f",
+    "leaders": [
+      {
+        "id": "cmng6un0c0053vdj4uvq1tzea",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6un8g0055vdj4unkv54ut",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6twfz002jvdj4coxbdgy1",
+          "url": "http://www.sc.gov.cn/10462/c110424gtn/2026/3/28/0b4dcc4931b7428d904411b1d0358396.shtml",
+          "title": "省政府领导与民营企业月月见活动举行 推进医药健康产业高质量发展",
+          "publishTime": "2026-03-28T02:07:30.000Z",
+          "sourceName": "四川日报",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmng2cbhd00fvvd5gktsfuzqo",
     "region": {
       "code": "beijing",
@@ -705,6 +1105,106 @@
           "sourceSite": {
             "siteName": "北京省级政府门户",
             "baseDomain": "beijing.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmngyjuwm00fbvdzk73ma2u0m",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-27T00:00:00.000Z",
+    "normalizedTitle": "陈书平主持召开重要会议",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 财经成都 成都河长 成都教育 爱看视频 爱看短剧 爱看萌宠 更多 爱看短剧 爱看萌宠 市政府党组（扩大）会议召开 陈书平主持并讲话 2026-03-27 20:56 来源： 成都日报 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。3月27日，市委副书记、市长陈书平主持召开市政府党组（扩大）会议，传达学习习近平总书记近期重要讲话重要指示精神，研究市政府贯彻落实措施",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"市政府党组（扩大）会议召开\",\"陈书平主持并讲话_本地_红星新闻网\",\"成都头条\",\"原创\",\"本地\",\"国内\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "13c9b7b2d4c3a07c2c7607d7ac3154e833dc22ab",
+    "leaders": [
+      {
+        "id": "cmngyjv3k00fdvdzk55vdt6ho",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyjval00ffvdzkfne84ty4",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngvb1h200htvdikg56ujpmf",
+          "url": "http://news.chengdu.cn/2026/0327/69c67e363a56c94052c64a56.shtml",
+          "title": "市政府党组（扩大）会议召开 陈书平主持并讲话_本地_红星新闻网",
+          "publishTime": "2026-03-27T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmngyjtxv00f5vdzke2is0pk8",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-27T00:00:00.000Z",
+    "normalizedTitle": "陈书平调研",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 财经成都 成都河长 成都教育 爱看视频 爱看短剧 爱看萌宠 更多 爱看短剧 爱看萌宠 陈书平赴成华区、彭州市、成都高新区调研并走访重点企业开展进解优促时强调 以一流营商环境护航企业高质量发展 2026-03-27 21:08 来源： 成都日报 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。近日，市委副书记、市长陈书平先后前往成华区、彭州市、成都高新区，深入重点企业走访调研，现场开展进万企、解难题、优环境、促发展工作，强调要深入学习贯彻习近平总书记在全国两会期间的重要讲话和全国两会精神，认真落实党中央、国务院决策部署，以及省委、省政府和市委、市政府工作要求，着力提升惠企政策精准度、为企服务实效性，以一流营商环境护航企业高质量发展，为奋力实现一季度 开门红、推动全市经济高质量发展提供坚实支撑",
+    "eventType": "RESEARCH",
+    "locationText": null,
+    "keywordsJson": "[\"陈书平赴成华区\",\"彭州市\",\"成都高新区调研并走访重点企业开展进解优促时强调\",\"以一流营商环境护航企业高质量发展_本地_红星新闻网\",\"成都头条\",\"原创\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "8008744702ab788ca309793bd3e5299c777e6862",
+    "leaders": [
+      {
+        "id": "cmngyju5q00f7vdzktc469y1h",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyjudy00f9vdzk32sz04l1",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngvazei00hpvdik293g5ubx",
+          "url": "http://news.chengdu.cn/2026/0327/69c6812c3a56c94052c64b13.shtml",
+          "title": "陈书平赴成华区、彭州市、成都高新区调研并走访重点企业开展进解优促时强调 以一流营商环境护航企业高质量发展_本地_红星新闻网",
+          "publishTime": "2026-03-27T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
           }
         }
       }
@@ -1016,6 +1516,428 @@
           "sourceSite": {
             "siteName": "北京省级政府门户",
             "baseDomain": "beijing.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmngyjwpr00fnvdzkzxtgcypv",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-26T00:00:00.000Z",
+    "normalizedTitle": "陈书平会见有关方面负责人",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 财经成都 成都河长 成都教育 爱看视频 爱看短剧 爱看萌宠 更多 爱看短剧 爱看萌宠 陈书平会见美国安利公司全球总裁兼首席执行官迈克尔·尼尔森一行 2026-03-27 09:59 来源： 成都日报 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。3月26日，市委副书记、市长陈书平会见美国安利公司全球总裁兼首席执行官迈克尔·尼尔森一行，双方就深化务实合作、实现共赢发展进行了深入交流",
+    "eventType": "MEETING_WITH",
+    "locationText": null,
+    "keywordsJson": "[\"陈书平会见美国安利公司全球总裁兼首席执行官迈克尔·尼尔森一行_本地_红星新闻网\",\"成都头条\",\"原创\",\"本地\",\"国内\",\"头条智造\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "44b53d721e180c3c777b4a34f903ecc8f9674a13",
+    "leaders": [
+      {
+        "id": "cmngyjx0t00fpvdzkcr68mfku",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyjxdp00frvdzkbwzt3f4c",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngvbc6500ilvdik9ha11u9f",
+          "url": "http://news.chengdu.cn/2026/0327/69c5e4163a56c94052c6208d.shtml",
+          "title": "陈书平会见美国安利公司全球总裁兼首席执行官迈克尔·尼尔森一行_本地_红星新闻网",
+          "publishTime": "2026-03-27T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmngyjvqw00fhvdzkdpl6af54",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-26T00:00:00.000Z",
+    "normalizedTitle": "曹立军主持召开重要会议",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 财经成都 成都河长 成都教育 爱看视频 爱看短剧 爱看萌宠 更多 爱看短剧 爱看萌宠 四川新闻联播丨王晓晖主持召开省委专题会议强调 积极推进闲置低效资产资源盘活利用 更好支撑四川经济社会高质量发展 施小琳讲话 于立军出席 2026-03-27 11:51 来源： 四川观察 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。王晓晖主持召开省委专题会议强调积极推进闲置低效资产资源盘活利用更好支撑四川经济社会高质量发展施小琳讲话 于立军出席3月26日，省委书记王晓晖主持召开省委专题会议，研究部署进一步盘活利用闲置低效资产资源工作",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"四川新闻联播丨王晓晖主持召开省委专题会议强调\",\"积极推进闲置低效资产资源盘活利用\",\"更好支撑四川经济社会高质量发展\",\"施小琳讲话\",\"于立军出席_本地_红星新闻网\",\"成都头条\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "f1f51c0db2d868f3df20a0abc2470921dd5bbf0f",
+    "leaders": [
+      {
+        "id": "cmngyjw2c00fjvdzk03epqx58",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyjwak00flvdzkxvezksit",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngvb6t700i7vdikosjtuzlo",
+          "url": "http://news.chengdu.cn/2026/0327/69c5fea73a56c94052c62716.shtml",
+          "title": "四川新闻联播丨王晓晖主持召开省委专题会议强调 积极推进闲置低效资产资源盘活利用 更好支撑四川经济社会高质量发展 施小琳讲话 于立军出席_本地_红星新闻网",
+          "publishTime": "2026-03-27T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6uomi005dvdj4caui58l6",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-26T00:00:00.000Z",
+    "normalizedTitle": "施小琳主持召开重要会议",
+    "summary": "省安委会召开2026年第一次专题调度会议 深刻汲取事故教训 彻底查找整改问题隐患 2026年03月26日 07时45分 来源: 四川日报 3月25日，省安委会召开2026年第一次专题调度会议。会议总结2025年全省安全生产工作，听取近期隐患排查汇报，研究中央安全生产考核巡查初步反馈问题隐患整改工作，复盘典型生产安全事故，分析当前安全风险形势，研究部署下步重点工作",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"省安委会召开2026年第一次专题调度会议\",\"深刻汲取事故教训\",\"彻底查找整改问题隐患\",\"2026年03月26日\",\"07时45分\",\"来源:\"]",
+    "confidenceScore": 0.9200000000000002,
+    "dedupKey": "824355416ff32ea18032bd5953ba063e4d408e0f",
+    "leaders": [
+      {
+        "id": "cmng6uoxf005fvdj4r3v2nqva",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6up43005hvdj4w4pc0t6v",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6ty9c002nvdj4ru7j6oqj",
+          "url": "http://www.sc.gov.cn/10462/14721/2026/3/26/66dcf3d48d884ed1935ae39d8737b424.shtml",
+          "title": "省安委会召开2026年第一次专题调度会议 深刻汲取事故教训 彻底查找整改问题隐患",
+          "publishTime": "2026-03-29T00:55:14.000Z",
+          "sourceName": "四川日报",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6unoh0057vdj46f4txry8",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-26T00:00:00.000Z",
+    "normalizedTitle": "王晓晖主持召开重要会议",
+    "summary": "稳供应、稳价格、稳预期 全力服务保障春季农业生产 2026年03月26日 07时51分 来源: 四川日报 3月25日，全国供销合作社全力保障2026年春耕农资供应暨深化绿色农资升级行动现场会在乐山市召开。中华全国供销合作总社党组书记、理事会主任王宇燕出席会议并讲话",
+    "eventType": "MEETING",
+    "locationText": "乐山市",
+    "keywordsJson": "[\"稳供应\",\"稳价格\",\"稳预期\",\"全力服务保障春季农业生产\",\"2026年03月26日\",\"07时51分\"]",
+    "confidenceScore": 0.9500000000000002,
+    "dedupKey": "76313e2acd79f7bdfdf792a36411212bad6547a2",
+    "leaders": [
+      {
+        "id": "cmng6unx40059vdj4q80o722n",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnfqin45003cvdnc82n2vnnn",
+          "name": "王晓晖",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "四川省委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6uo5y005bvdj4prqa5n0c",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6tx9e002lvdj4t5klls9p",
+          "url": "http://www.sc.gov.cn/10462/c106465/2026/3/26/d34179fffe7f4182b3f94e60e6daa915.shtml",
+          "title": "稳供应、稳价格、稳预期 全力服务保障春季农业生产",
+          "publishTime": "2026-03-26T00:36:01.000Z",
+          "sourceName": "四川日报",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6uill004dvdj4le4k55p8",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-26T00:00:00.000Z",
+    "normalizedTitle": "施小琳在四川大学望江校区国家大学科技园调研",
+    "summary": "施小琳调研对接大学科研成果转化工作 发挥校地科创优势 推动有组织的创新和成果转化落地 2026年03月26日 17时55分 来源: 川观新闻 3月25日，省委副书记、省长施小琳在四川大学望江校区国家大学科技园调研四川博菲硕科技有限公司科研成果转化情况。3月25日，省委副书记、省长施小琳到四川大学、电子科技大学、西南交通大学调研对接大学科研成果转化工作",
+    "eventType": "RESEARCH",
+    "locationText": "四川大学望江校区国家大学科技园",
+    "keywordsJson": "[\"施小琳调研对接大学科研成果转化工作\",\"发挥校地科创优势\",\"推动有组织的创新和成果转化落地\",\"2026年03月26日\",\"17时55分\",\"来源:\"]",
+    "confidenceScore": 0.9500000000000002,
+    "dedupKey": "050f794a03fecaed9b31c98d929ca2dc0b971dc9",
+    "leaders": [
+      {
+        "id": "cmng6uiyx004fvdj4objruldt",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6uj7b004hvdj4m013lk6d",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6ttb3002bvdj44dhkmh8t",
+          "url": "http://www.sc.gov.cn/10462/c105962s/2026/3/26/5c4341279b05452aa93b2c2edfffeef1.shtml",
+          "title": "施小琳调研对接大学科研成果转化工作 发挥校地科创优势 推动有组织的创新和成果转化落地",
+          "publishTime": "2026-04-01T00:12:29.000Z",
+          "sourceName": "川观新闻",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6ug1r0045vdj4k7dw05s9",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-26T00:00:00.000Z",
+    "normalizedTitle": "王晓晖、施小琳主持召开重要会议",
+    "summary": "王晓晖主持召开省委专题会议强调 积极推进闲置低效资产资源盘活利用 更好支撑四川经济社会高质量发展 施小琳讲话 于立军出席 2026年03月26日 18时37分 来源: 川观新闻 3月26日，省委书记王晓晖主持召开省委专题会议，研究部署进一步盘活利用闲置低效资产资源工作。他强调，要深入贯彻落实习近平总书记重要指示精神和党中央决策部署，树立和践行正确政绩观，积极推进闲置低效资产资源盘活利用，不断拓展发展空间、增添发展动力，更好支撑四川经济社会高质量发展",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"王晓晖主持召开省委专题会议强调\",\"积极推进闲置低效资产资源盘活利用\",\"更好支撑四川经济社会高质量发展\",\"施小琳讲话\",\"于立军出席\",\"2026年03月26日\"]",
+    "confidenceScore": 0.9200000000000002,
+    "dedupKey": "729757e0abd8f96cff50ea3814c1b54cc23fd1f8",
+    "leaders": [
+      {
+        "id": "cmng6ugcr0047vdj4op4pnwib",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnfqin45003cvdnc82n2vnnn",
+          "name": "王晓晖",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "四川省委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmng6ugnx0049vdj4r259l9iq",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6uh9w004bvdj4olvg29bd",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6tshx0029vdj4cthyu9qx",
+          "url": "http://www.sc.gov.cn/10462/c105962s/2026/3/26/7d918931fc55470d85f3a91c6955850d.shtml",
+          "title": "王晓晖主持召开省委专题会议强调 积极推进闲置低效资产资源盘活利用 更好支撑四川经济社会高质量发展 施小琳讲话 于立军出席",
+          "publishTime": "2026-03-31T00:27:42.000Z",
+          "sourceName": "川观新闻",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6uem5003xvdj4abs9pn97",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-26T00:00:00.000Z",
+    "normalizedTitle": "王晓晖、施小琳会见有关方面负责人",
+    "summary": "王晓晖施小琳会见中华全国供销合作总社党组书记、理事会主任王宇燕 2026年03月26日 19时43分 来源: 川观新闻 3月26日，省委书记、省人大常委会主任王晓晖，省委副书记、省长施小琳在成都会见中华全国供销合作总社党组书记、理事会主任王宇燕一行。会见中，双方围绕贯彻落实习近平总书记对四川工作系列重要指示精神和党中央决策部署，就推动供销合作事业高质量发展，服务保障国家粮食安全、完善农业社会化服务体系、健全农产品流通网络、发展乡村富民产业、繁荣城乡消费市场，更好助力我省乡村全面振兴、加快农业农村现代化等交换了意见",
+    "eventType": "MEETING_WITH",
+    "locationText": "成都",
+    "keywordsJson": "[\"以正确政绩观真抓实干\",\"王晓晖施小琳会见中华全国供销合作总社党组书记\",\"理事会主任王宇燕\",\"2026年03月26日\",\"19时43分\",\"来源:\"]",
+    "confidenceScore": 0.9500000000000002,
+    "dedupKey": "2e41b7a9abb1db9c0b06f185fab9c7ba18df30c4",
+    "leaders": [
+      {
+        "id": "cmng6uezw003zvdj409cxtx4q",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnfqin45003cvdnc82n2vnnn",
+          "name": "王晓晖",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "四川省委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmng6ufck0041vdj4i26eji06",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6ufk10043vdj4blqvlpbx",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6trql0027vdj4eq2jmfih",
+          "url": "http://www.sc.gov.cn/10462/c105962s/2026/3/26/ffda88aff8904cf69074c961a6656739.shtml",
+          "title": "以正确政绩观真抓实干",
+          "publishTime": "2026-03-31T00:33:36.000Z",
+          "sourceName": "川观新闻",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6udjm003rvdj45j6ol2t3",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-26T00:00:00.000Z",
+    "normalizedTitle": "施小琳主持召开重要会议",
+    "summary": "施小琳在省推进民营经济发展领导小组全体会议暨优化营商环境工作会议上强调 以更高效服务更精准举措更优质环境 让民营企业放手创新创造 不断促进民营经济发展壮大 2026年03月26日 20时59分 来源: 川观新闻 3月26日，省推进民营经济发展领导小组全体会议暨优化营商环境工作会议召开。省委副书记、省长施小琳出席会议并讲话，强调要深入贯彻习近平总书记关于民营经济的重要论述，按照省委要求，坚持和落实两个毫不动摇三个没有变，认真贯彻民营经济促进法，推动有效市场和有为政府更好结合，以更高效服务、更精准举措、更优质环境，让民营企业公平参与竞争、平等获得资源、充分享有机会、放手创新创造，不断促进全省民营经济发展壮大",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"施小琳会见中粮集团总经理白勇\",\"施小琳在省推进民营经济发展领导小组全体会议暨优化营商环境工作会议上强调\",\"以更高效服务更精准举措更优质环境\",\"让民营企业放手创新创造\",\"不断促进民营经济发展壮大\",\"2026年03月26日\"]",
+    "confidenceScore": 0.9200000000000002,
+    "dedupKey": "02331a991bd6ba92590701b0af5fa478b2e61ec4",
+    "leaders": [
+      {
+        "id": "cmng6udvu003tvdj4pjxqz754",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6ue4o003vvdj4lp0fy7uy",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6tqyp0025vdj4y2q2ibt2",
+          "url": "http://www.sc.gov.cn/10462/c105962s/2026/3/26/a013a564bceb4f779f04d5037e83c2c2.shtml",
+          "title": "施小琳会见中粮集团总经理白勇",
+          "publishTime": "2026-04-01T00:12:51.000Z",
+          "sourceName": "川观新闻",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
           }
         }
       }
@@ -1533,6 +2455,106 @@
     ]
   },
   {
+    "id": "cmngyk2je00ghvdzk2imghlwr",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-25T00:00:00.000Z",
+    "normalizedTitle": "王飞任川航党委书记、董事长_原创_红星新闻网",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 爱看短剧 爱看萌宠 财经成都 成都河长 成都教育 爱看视频 区域频道 更多 爱看视频 区域频道 王飞任川航党委书记、董事长 2026-03-25 17:05 来源： 红星新闻网 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。红星新闻网3月25日讯 3月23日上午， 川航官网消息，四川航空集团有限责任公司召开干部大会，宣布省委、省政府关于公司党委书记、董事长的任免决定：王飞同志任四川航空集团有限责任公司党委书记、董事长；李越同志不再担任四川航空集团有限责任公司党委书记、董事长职务",
+    "eventType": "OTHER",
+    "locationText": null,
+    "keywordsJson": "[\"王飞任川航党委书记\",\"董事长_原创_红星新闻网\",\"成都头条\",\"原创\",\"本地\",\"国内\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "3f9ddc9f6615b86ac42e39eaad1b8c9776d37d4e",
+    "leaders": [
+      {
+        "id": "cmngyk2t400gjvdzk8j6osyli",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyk2zc00glvdzkeiloikye",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngvfnfg00qzvdikazs2tpod",
+          "url": "http://news.chengdu.cn/2026/0325/69c3a5073a56c94052c5c2ba.shtml",
+          "title": "王飞任川航党委书记、董事长_原创_红星新闻网",
+          "publishTime": "2026-03-25T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmngyjye400ftvdzkxrb14qn8",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-25T00:00:00.000Z",
+    "normalizedTitle": "陈书平调研",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 爱看短剧 爱看萌宠 财经成都 成都河长 成都教育 爱看视频 区域频道 更多 爱看视频 区域频道 深入推进建圈强链 促进智能网联汽车产业高质量发展 2026-03-26 08:08 来源： 成都日报 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。3月25日，市委副书记、市长陈书平先后前往青白江区、龙泉驿区，了解当地经济社会发展情况，调研智能网联汽车产业链，强调要深入学习贯彻习近平总书记在全国两会期间的重要讲话精神和关于建设现代化产业体系的重要论述，认真落实党中央、国务院决策部署，以及省委、省政府和市委、市政府工作要求，牢牢把握高质量发展这个首要任务，立足产业基础，紧盯前沿领域，提升技术自主创新能力，促进产业协同集聚发展，扩大多元场景综合应用，持续做大做强智能网联汽车产业链，为一季度开门红、十五五开好局提供坚实支撑",
+    "eventType": "RESEARCH",
+    "locationText": null,
+    "keywordsJson": "[\"深入推进建圈强链\",\"促进智能网联汽车产业高质量发展_本地_红星新闻网\",\"成都头条\",\"原创\",\"本地\",\"国内\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "1f58ae709f0d1500d580d9b85c420e83e5c2ec85",
+    "leaders": [
+      {
+        "id": "cmngyjyp300fvvdzkw62jbuor",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyjyyk00fxvdzkekv1fx0r",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngvbtti00jpvdik17zb9ym1",
+          "url": "http://news.chengdu.cn/2026/0326/69c478c33a56c94052c5dfe8.shtml",
+          "title": "深入推进建圈强链 促进智能网联汽车产业高质量发展_本地_红星新闻网",
+          "publishTime": "2026-03-26T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmng2dl4p00n5vd5gcra8ubec",
     "region": {
       "code": "zhejiang",
@@ -1777,6 +2799,289 @@
           "sourceSite": {
             "siteName": "浙江省级政府门户",
             "baseDomain": "zj.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmngyjzqp00fzvdzk6d84qc7b",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-24T00:00:00.000Z",
+    "normalizedTitle": "曹立军主持召开重要会议",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 爱看短剧 爱看萌宠 财经成都 成都河长 成都教育 爱看视频 区域频道 更多 爱看视频 区域频道 王晓晖主持召开省委人才工作领导小组会议强调 坚持教育科技人才一体发展 把更多优秀人才集聚到治蜀兴川事业发展中来 施小琳于立军出席 2026-03-25 10:38 来源： 四川观察 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。王晓晖主持召开省委人才工作领导小组会议强调坚持教育科技人才一体发展把更多优秀人才集聚到治蜀兴川事业发展中来施小琳于立军出席3月24日，省委人才工作领导小组会议召开，省委书记、领导小组组长王晓晖主持会议并讲话",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"王晓晖主持召开省委人才工作领导小组会议强调\",\"坚持教育科技人才一体发展\",\"把更多优秀人才集聚到治蜀兴川事业发展中来\",\"施小琳于立军出席_本地_红星新闻网\",\"成都头条\",\"原创\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "1a462d7203ec1fec9d6f90dda6cd70916e15bd6c",
+    "leaders": [
+      {
+        "id": "cmngyjzyb00g1vdzk4l015nzq",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyk07h00g3vdzkib7s9iav",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngvc3qu00k7vdikkdsycdcr",
+          "url": "http://news.chengdu.cn/2026/0325/69c34a693a56c94052c5acaf.shtml",
+          "title": "王晓晖主持召开省委人才工作领导小组会议强调 坚持教育科技人才一体发展 把更多优秀人才集聚到治蜀兴川事业发展中来 施小琳于立军出席_本地_红星新闻网",
+          "publishTime": "2026-03-25T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6usxl0065vdj4xnnhpcvb",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-24T00:00:00.000Z",
+    "normalizedTitle": "王晓晖、施小琳在成都调研",
+    "summary": "胡云在成都调研城镇燃气安全工作时强调 增强责任感紧迫感 加强隐患排查整治 2026年03月24日 07时57分 来源: 四川日报 3月23日，副省长胡云赴成都市调研城镇燃气安全工作，强调要深入学习领会习近平总书记关于安全生产系列重要指示精神，切实增强做好城镇燃气安全工作的责任感和紧迫感，守牢燃气安全底线，进一步加强隐患排查和整治，坚决遏制重特大事故发生。胡云一行前往成都燃气集团，在第三储配站、金牛服务大厅、呼叫中心、调度中心等地，详细了解燃气综合储配站安全管理、居民燃气服务、燃气供气保障及管网运行监测应急抢险等工作情况",
+    "eventType": "RESEARCH",
+    "locationText": "成都",
+    "keywordsJson": "[\"胡云在成都调研城镇燃气安全工作时强调\",\"增强责任感紧迫感\",\"加强隐患排查整治\",\"2026年03月24日\",\"07时57分\",\"来源:\"]",
+    "confidenceScore": 0.9500000000000002,
+    "dedupKey": "8af0cb1d0c9ecb3bfd2edec1a8b1e8c6aafac144",
+    "leaders": [
+      {
+        "id": "cmng6ut6e0067vdj4bs956pmq",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnfqin45003cvdnc82n2vnnn",
+          "name": "王晓晖",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "四川省委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmng6utku0069vdj4gj5y96p8",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6utto006bvdj4qzdo4skz",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6u1ca002vvdj4sk9v6v6r",
+          "url": "http://www.sc.gov.cn/10462/c106465/2026/3/24/a0a217e0ac0f47668385dd1af23b9b57.shtml",
+          "title": "胡云在成都调研城镇燃气安全工作时强调 增强责任感紧迫感 加强隐患排查整治",
+          "publishTime": "2026-03-25T00:38:30.000Z",
+          "sourceName": "四川日报",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6uryq005zvdj4pdmgdjrk",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-24T00:00:00.000Z",
+    "normalizedTitle": "施小琳调研",
+    "summary": "施小琳在调研就业和职业技能培训工作时强调 提质扩面开展大规模职业技能提升培训 促进高质量充分就业 更好服务大局服务发展服务民生 2026年03月24日 13时40分 来源: 川观新闻 3月23日，省委副书记、省长施小琳在成都新华高级技工学校，调研服务业技能人才培训情况。3月23日，省委副书记、省长施小琳调研就业和职业技能培训工作，强调要深入贯彻习近平总书记关于就业和技能人才工作的重要指示精神，落实党中央、国务院部署和省委要求，把促进就业作为重大责任和厚植发展优势着力重点，以改革创新和务实举措，提质扩面开展大规模职业技能提升培训，着力拓岗位、优服务、兜底线，促进高质量充分就业，更好服务大局、服务发展、服务民生",
+    "eventType": "RESEARCH",
+    "locationText": null,
+    "keywordsJson": "[\"施小琳在调研就业和职业技能培训工作时强调\",\"提质扩面开展大规模职业技能提升培训\",\"促进高质量充分就业\",\"更好服务大局服务发展服务民生\",\"2026年03月24日\",\"13时40分\"]",
+    "confidenceScore": 0.9200000000000002,
+    "dedupKey": "3268c3c3e7d67a00ba93bc3d6f106dcf809bb890",
+    "leaders": [
+      {
+        "id": "cmng6us7s0061vdj4sv41uh2r",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6usgs0063vdj43eg853dw",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6u0mo002tvdj4bveev1yw",
+          "url": "http://www.sc.gov.cn/10462/c105962s/2026/3/24/af05e8661b504f5d87f06a2f5e59442f.shtml",
+          "title": "施小琳在调研就业和职业技能培训工作时强调 提质扩面开展大规模职业技能提升培训 促进高质量充分就业 更好服务大局服务发展服务民生",
+          "publishTime": "2026-03-28T02:02:33.000Z",
+          "sourceName": "川观新闻",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6uqrr005rvdj4suweebgh",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-24T00:00:00.000Z",
+    "normalizedTitle": "王晓晖、施小琳主持召开重要会议",
+    "summary": "王晓晖主持召开省委人才工作领导小组会议强调 坚持教育科技人才一体发展 把更多优秀人才集聚到治蜀兴川事业发展中来 施小琳于立军出席 2026年03月24日 18时55分 来源: 川观新闻 3月24日，省委人才工作领导小组会议召开，省委书记、领导小组组长王晓晖主持会议并讲话。他强调，要深入贯彻落实习近平总书记关于做好新时代人才工作的重要思想，坚持教育科技人才一体发展，深入实施新时代人才强省战略，统筹抓好各层次各领域人才队伍建设，把更多优秀人才集聚到治蜀兴川事业发展中来",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"王晓晖主持召开省委人才工作领导小组会议强调\",\"坚持教育科技人才一体发展\",\"把更多优秀人才集聚到治蜀兴川事业发展中来\",\"施小琳于立军出席\",\"2026年03月24日\",\"18时55分\"]",
+    "confidenceScore": 0.9200000000000002,
+    "dedupKey": "4b4535ece0a10db0deee2d865ba34870ab0a6a6d",
+    "leaders": [
+      {
+        "id": "cmng6ur0c005tvdj48pp9opz0",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnfqin45003cvdnc82n2vnnn",
+          "name": "王晓晖",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "四川省委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmng6ur96005vvdj4yeeac4m0",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6uriy005xvdj4sbmlem4w",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6tzur002rvdj4y0dj36gc",
+          "url": "http://www.sc.gov.cn/10462/c105962s/2026/3/24/8bdd141720ac44b194afb57bad728819.shtml",
+          "title": "王晓晖主持召开省委人才工作领导小组会议强调 坚持教育科技人才一体发展 把更多优秀人才集聚到治蜀兴川事业发展中来 施小琳于立军出席",
+          "publishTime": "2026-03-26T11:04:28.000Z",
+          "sourceName": "川观新闻",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6uply005jvdj4w2x3ppg9",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-24T00:00:00.000Z",
+    "normalizedTitle": "王晓晖、施小琳部署经济工作",
+    "summary": "施小琳在十五五省级重点专项规划编制工作专题会上强调 加快推动省级专项规划衔接完善落地实施 为十五五良好开局和高质量发展打牢基础 2026年03月24日 20时05分 来源: 川观新闻 3月24日，省政府召开十五五省级重点专项规划编制工作专题会。省委副书记、省长施小琳出席并讲话，强调要深入贯彻习近平总书记关于发展战略及规划工作的重要论述和全国两会精神，全面对标对接国省十五五规划纲要，做好规划编制精简优化工作，加快推动省级专项规划衔接完善、落地实施，为十五五良好开局和经济社会高质量发展打牢基础",
+    "eventType": "ECONOMIC_WORK",
+    "locationText": null,
+    "keywordsJson": "[\"支持稳岗促就业\",\"四川细化投资于人就业政策措施\",\"施小琳在十五五省级重点专项规划编制工作专题会上强调\",\"加快推动省级专项规划衔接完善落地实施\",\"为十五五良好开局和高质量发展打牢基础\",\"2026年03月24日\"]",
+    "confidenceScore": 0.9200000000000002,
+    "dedupKey": "ad326a38697c534bef7d01169f31524c9a15fa6c",
+    "leaders": [
+      {
+        "id": "cmng6upul005lvdj4fg732ifn",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnfqin45003cvdnc82n2vnnn",
+          "name": "王晓晖",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "四川省委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmng6uq1m005nvdj4htl74lju",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6uqbc005pvdj4rg47ytaq",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6tz3z002pvdj4dw5c7he4",
+          "url": "http://www.sc.gov.cn/10462/c105962s/2026/3/24/c21fb3cda80048a49ef729bbaee2e474.shtml",
+          "title": "支持稳岗促就业 四川细化投资于人就业政策措施",
+          "publishTime": "2026-03-28T02:02:47.000Z",
+          "sourceName": "川观新闻",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
           }
         }
       }
@@ -2194,6 +3499,56 @@
     ]
   },
   {
+    "id": "cmngyk0p600g5vdzkbq0hde51",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-23T00:00:00.000Z",
+    "normalizedTitle": "曹立军主持召开重要会议",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 爱看短剧 爱看萌宠 财经成都 成都河长 成都教育 爱看视频 区域频道 更多 爱看视频 区域频道 市委常委会召开会议 传达学习习近平总书记有关重要讲话重要复信精神 研究成都贯彻落实举措 2026-03-23 14:00 来源： 成都发布 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。3月23日，市委常委会召开会议，传达学习习近平总书记有关重要讲话重要复信精神，以及省委常委会会议精神，研究成都贯彻落实举措",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"市委常委会召开会议\",\"传达学习习近平总书记有关重要讲话重要复信精神\",\"研究成都贯彻落实举措_本地_红星新闻网\",\"成都头条\",\"原创\",\"本地\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "c7d76f85861fa37ec640e4755ac684f64caa899c",
+    "leaders": [
+      {
+        "id": "cmngyk0wb00g7vdzk2p9dslbp",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmng8hbq5000xvds0r5atywq7",
+          "name": "曹立军",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "成都市委书记",
+          "normalizedTitle": "党委书记"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyk13b00g9vdzkoqgi6ybz",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngvcxny00lhvdikaes5o0y2",
+          "url": "http://news.chengdu.cn/2026/0323/69c146223a56c94052c56a6c.shtml",
+          "title": "市委常委会召开会议 传达学习习近平总书记有关重要讲话重要复信精神 研究成都贯彻落实举措_本地_红星新闻网",
+          "publishTime": "2026-03-23T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "cmng2dq2y00obvd5ga6pul5xo",
     "region": {
       "code": "zhejiang",
@@ -2488,6 +3843,117 @@
           "sourceSite": {
             "siteName": "北京省级政府门户",
             "baseDomain": "beijing.gov.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmngyk1k600gbvdzk57f7im4y",
+    "region": {
+      "code": "chengdu",
+      "name": "成都",
+      "type": "CITY"
+    },
+    "eventDate": "2026-03-20T00:00:00.000Z",
+    "normalizedTitle": "陈书平会见有关方面负责人",
+    "summary": "成都头条 原创 本地 国内 头条智造 热点专题 传真机 公示 新消费 生活 爱看短剧 爱看萌宠 财经成都 成都河长 成都教育 爱看视频 区域频道 更多 爱看视频 区域频道 陈书平会见韩国驻华大使卢载宪一行 陈彦夫参加 2026-03-20 23:47 来源： 成都日报 × 打开微信，点击底部的发现，使用扫一扫即可将网页分享。3月20日，市委副书记、市长陈书平会见韩国驻华大使卢载宪一行",
+    "eventType": "MEETING_WITH",
+    "locationText": null,
+    "keywordsJson": "[\"陈书平会见韩国驻华大使卢载宪一行\",\"陈彦夫参加_本地_红星新闻网\",\"成都头条\",\"原创\",\"本地\",\"国内\"]",
+    "confidenceScore": 0.8400000000000001,
+    "dedupKey": "a8f5a0107c765695a12f415804981fd0b7b76c38",
+    "leaders": [
+      {
+        "id": "cmngyk1th00gdvdzk7o5ojtcu",
+        "roleInEvent": "市长",
+        "leader": {
+          "id": "cmng8hc6r000zvds0nvrjsslg",
+          "name": "陈书平",
+          "roleType": "MAYOR",
+          "officialTitle": "成都市市长",
+          "normalizedTitle": "市长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmngyk21c00gfvdzktgaw6vxu",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmngve1bm00nlvdikicfxe8et",
+          "url": "http://news.chengdu.cn/2026/0320/69bd6c073a56c94052c4fec1.shtml",
+          "title": "陈书平会见韩国驻华大使卢载宪一行 陈彦夫参加_本地_红星新闻网",
+          "publishTime": "2026-03-20T00:00:00.000Z",
+          "sourceName": "",
+          "sourceDomain": "news.chengdu.cn",
+          "credibilityLevel": "B",
+          "sourceSite": {
+            "siteName": "成都全搜索",
+            "baseDomain": "chengdu.cn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "cmng6uuah006dvdj4rdm1i347",
+    "region": {
+      "code": "sichuan",
+      "name": "四川",
+      "type": "PROVINCE"
+    },
+    "eventDate": "2026-03-20T00:00:00.000Z",
+    "normalizedTitle": "王晓晖、施小琳主持召开重要会议",
+    "summary": "南充广元内江达州眉山阿坝传达学习全国两会精神 围绕重点领域真抓实干 推动两会精神落地见效 2026年03月20日 07时49分 来源: 四川日报 连日来，南充、广元、内江、达州、眉山、阿坝分别召开会议，专题传达学习全国两会精神，研究贯彻落实意见。各地表示，要认真领会全国两会精神，坚决贯彻落实党中央、国务院和省委、省政府部署要求，围绕扩大内需、提振消费、产业发展、科技创新、民生改善等重点领域真抓实干，推动全国两会精神落地见效",
+    "eventType": "MEETING",
+    "locationText": null,
+    "keywordsJson": "[\"攀枝花德阳乐山巴中雅安资阳凉山传达学习全国两会精神\",\"全力以赴拼经济搞建设\",\"推动十五五开好局起好步\",\"南充广元内江达州眉山阿坝传达学习全国两会精神\",\"围绕重点领域真抓实干\",\"推动两会精神落地见效\"]",
+    "confidenceScore": 0.9200000000000002,
+    "dedupKey": "e8089cf65cbee120af0930b2916addc2a2e3a567",
+    "leaders": [
+      {
+        "id": "cmng6uuna006fvdj4gpttq37m",
+        "roleInEvent": "党委书记",
+        "leader": {
+          "id": "cmnfqin45003cvdnc82n2vnnn",
+          "name": "王晓晖",
+          "roleType": "PARTY_SECRETARY",
+          "officialTitle": "四川省委书记",
+          "normalizedTitle": "党委书记"
+        }
+      },
+      {
+        "id": "cmng6uyef006hvdj4f5x0uhtd",
+        "roleInEvent": "省长",
+        "leader": {
+          "id": "cmnfqinao003evdncqfo8t5jc",
+          "name": "施小琳",
+          "roleType": "GOVERNOR",
+          "officialTitle": "四川省省长",
+          "normalizedTitle": "省长"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cmng6uyup006jvdj45g614lg1",
+        "isPrimary": true,
+        "matchScore": 1,
+        "extractionMethod": "official-adapter",
+        "rawArticle": {
+          "id": "cmng6u27a002xvdj4lyheicyd",
+          "url": "http://www.sc.gov.cn/10462/c112655/2026/3/20/0d4eb3bf2ec14fe390e0c788a1120d1b.shtml",
+          "title": "攀枝花德阳乐山巴中雅安资阳凉山传达学习全国两会精神 全力以赴拼经济搞建设 推动十五五开好局起好步",
+          "publishTime": "2026-03-24T07:19:47.000Z",
+          "sourceName": "四川日报",
+          "sourceDomain": "sc.gov.cn",
+          "credibilityLevel": "A",
+          "sourceSite": {
+            "siteName": "四川省级政府门户",
+            "baseDomain": "sc.gov.cn"
           }
         }
       }

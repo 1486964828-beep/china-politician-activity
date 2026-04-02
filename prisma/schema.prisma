@@ -9,12 +9,14 @@ datasource db {
 
 enum RegionLevel {
   PROVINCE
+  CITY
 }
 
 enum RegionType {
   PROVINCE
   AUTONOMOUS_REGION
   MUNICIPALITY
+  CITY
 }
 
 enum LeaderRoleType {

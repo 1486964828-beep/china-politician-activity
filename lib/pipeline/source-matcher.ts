@@ -38,6 +38,26 @@ function classifyCentralMedia(domain: string, title?: string, snippet?: string):
     };
   }
 
+  if (/chinanews\.com(\.cn)?$/.test(domain) || domain.includes("chinanews.com")) {
+    return {
+      sourceType: "CENTRAL_MEDIA",
+      credibilityLevel: "C",
+      confidence: 0.74,
+      isOfficialCandidate: true,
+      matchedSiteName: "中新网"
+    };
+  }
+
+  if (/cctv\.com$/.test(domain) || /cnr\.cn$/.test(domain)) {
+    return {
+      sourceType: "CENTRAL_MEDIA",
+      credibilityLevel: "C",
+      confidence: 0.72,
+      isOfficialCandidate: true,
+      matchedSiteName: "中央重点媒体"
+    };
+  }
+
   return null;
 }
 

@@ -33,6 +33,16 @@ function buildPagedUrls(baseUrl: string, limit: number) {
   return urls;
 }
 
+function buildNumericPageUrls(baseUrl: string, startPage: number, endPage: number) {
+  const urls: string[] = [];
+
+  for (let page = startPage; page <= endPage; page += 1) {
+    urls.push(baseUrl.replace("{page}", String(page)));
+  }
+
+  return urls;
+}
+
 async function fetchText(url: string) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 30_000);
@@ -89,6 +99,24 @@ function parseExplicitDate(text: string, referenceYear = 2026) {
   return parseChineseDateHint(normalized, new Date(Date.UTC(referenceYear, 0, 1)));
 }
 
+function parseDateFromUrl(url: string) {
+  const slashDate = url.match(/\/(20\d{2})\/(\d{2})(\d{2})\//);
+
+  if (slashDate) {
+    const [, year, month, day] = slashDate;
+    return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)));
+  }
+
+  const compactDate = url.match(/(?:^|[_/-])(20\d{2})(\d{2})(\d{2})(?:[_./-]|$)/);
+
+  if (compactDate) {
+    const [, year, month, day] = compactDate;
+    return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)));
+  }
+
+  return null;
+}
+
 function withinRange(date: Date | null | undefined, start: string, end: string) {
   if (!date || Number.isNaN(date.getTime())) {
     return false;
@@ -132,16 +160,27 @@ function extractLinksFromPage(input: {
   leaderNames: string[];
   start: string;
   end: string;
+  requireLeaderInTitle?: boolean;
+  titleKeywords?: string[];
 }) {
   const $ = load(input.html);
   const candidates: OfficialCandidate[] = [];
+  const requireLeaderInTitle = input.requireLeaderInTitle ?? true;
+  const titleKeywords = input.titleKeywords ?? [];
 
   $("li, .clearfix, .hbgov-list-block a, .page-content a, a[title]").each((_, element) => {
     const firstLink = $(element).is("a") ? $(element) : $(element).find("a").first();
     const href = firstLink.attr("href");
     const title = cleanText(firstLink.attr("title") || firstLink.text());
 
-    if (!href || title.length < 6 || !titleHasLeader(title, input.leaderNames)) {
+    if (!href || title.length < 6) {
+      return;
+    }
+
+    const matchedLeader = titleHasLeader(title, input.leaderNames);
+    const matchedKeyword = titleKeywords.some((keyword) => title.includes(keyword));
+
+    if (requireLeaderInTitle && !matchedLeader && !matchedKeyword) {
       return;
     }
 
@@ -152,7 +191,7 @@ function extractLinksFromPage(input: {
     }
 
     const dateHint = extractDateHintFromNode($, element);
-    const publishTime = dateHint ? parseExplicitDate(dateHint) : null;
+    const publishTime = dateHint ? parseExplicitDate(dateHint) : parseDateFromUrl(url);
 
     if (publishTime && !withinRange(publishTime, input.start, input.end)) {
       return;
@@ -174,6 +213,8 @@ async function collectFromPagedList(input: {
   leaderNames: string[];
   start: string;
   end: string;
+  requireLeaderInTitle?: boolean;
+  titleKeywords?: string[];
 }) {
   const all: OfficialCandidate[] = [];
 
@@ -186,7 +227,9 @@ async function collectFromPagedList(input: {
           pageUrl,
           leaderNames: input.leaderNames,
           start: input.start,
-          end: input.end
+          end: input.end,
+          requireLeaderInTitle: input.requireLeaderInTitle,
+          titleKeywords: input.titleKeywords
         })
       );
     } catch (error) {
@@ -238,7 +281,7 @@ async function collectHubei(input: RegionInput) {
 }
 
 async function collectSichuan(input: RegionInput) {
-  return collectFromPagedList({
+  const general = await collectFromPagedList({
     pageUrls: [
       "http://www.sc.gov.cn/10462/wza2012/zfld/zfld.shtml",
       "http://www.sc.gov.cn/10462/wza2012/zwxx/zwxx.shtml"
@@ -247,6 +290,38 @@ async function collectSichuan(input: RegionInput) {
     start: input.start,
     end: input.end
   });
+
+  const leaderPage = await collectFromPagedList({
+    pageUrls: ["http://www.sc.gov.cn/10462/szsxl/zfld_shixiaolin.shtml"],
+    leaderNames: input.leaderNames,
+    start: input.start,
+    end: input.end,
+    requireLeaderInTitle: false
+  });
+
+  const archive = await collectFromPagedList({
+    pageUrls: buildPagedUrls("http://www.sc.gov.cn/10462/10464/10465/10466/list_ft.shtml", 4),
+    leaderNames: input.leaderNames,
+    start: input.start,
+    end: input.end,
+    requireLeaderInTitle: false
+  });
+
+  return uniqueCandidates([...general, ...leaderPage, ...archive]);
+}
+
+async function collectChengdu(input: RegionInput) {
+  return collectFromPagedList({
+    pageUrls: [
+      ...buildNumericPageUrls("http://news.chengdu.cn/xwsy/bd/{page}.shtml", 1, 12),
+      ...buildNumericPageUrls("http://news.chengdu.cn/xwsy/yc/{page}.shtml", 1, 3)
+    ],
+    leaderNames: input.leaderNames,
+    start: input.start,
+    end: input.end,
+    requireLeaderInTitle: false,
+    titleKeywords: ["陈书平", "市长", "市政府", "政府常务会议", "政府党组会议", "市政府第"]
+  });
 }
 
 const REGION_ADAPTERS: Record<string, (input: RegionInput) => Promise<OfficialCandidate[]>> = {
@@ -254,7 +329,8 @@ const REGION_ADAPTERS: Record<string, (input: RegionInput) => Promise<OfficialCa
   guangdong: collectGuangdong,
   zhejiang: collectZhejiang,
   hubei: collectHubei,
-  sichuan: collectSichuan
+  sichuan: collectSichuan,
+  chengdu: collectChengdu
 };
 
 export async function collectOfficialCandidates(input: RegionInput) {

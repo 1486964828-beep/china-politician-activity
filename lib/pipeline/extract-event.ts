@@ -20,6 +20,21 @@ const EVENT_TYPE_RULES: Array<{ type: EventType; keywords: string[] }> = [
   { type: "LIANGHUI", keywords: ["全国两会", "两会", "代表团", "全国人大", "全国政协", "审议政府工作报告"] }
 ];
 
+const GENERIC_TITLE_ALIASES = new Set(["书记", "省长", "市长", "主席", "党委书记", "自治区主席"]);
+const TITLE_ACTION_HINT = /(主持|召开|会见|调研|考察|出席|督导|检查|走访|前往|赴|率队|带队)/;
+
+function splitLeaderAliases(leader: { name: string; aliasesJson: string; officialTitle: string; normalizedTitle: string }) {
+  const aliases = parseJsonArray(leader.aliasesJson).filter(Boolean);
+  const genericAliases = aliases.filter((item) => GENERIC_TITLE_ALIASES.has(item));
+  const specificAliases = aliases.filter((item) => !GENERIC_TITLE_ALIASES.has(item));
+
+  return {
+    nameTerms: [leader.name, ...specificAliases],
+    specificTitleTerms: [leader.officialTitle, ...specificAliases],
+    genericTitleTerms: [leader.normalizedTitle, ...genericAliases].filter(Boolean)
+  };
+}
+
 export async function resolveLeaders(regionId: string, text: string, focusTexts: string[] = [text]) {
   const regionLeaders = await prisma.leader.findMany({
     where: {
@@ -30,8 +45,8 @@ export async function resolveLeaders(regionId: string, text: string, focusTexts:
 
   for (const focusText of focusTexts) {
     const byNameOrAliasInFocus = regionLeaders.filter((leader) => {
-      const aliases = parseJsonArray(leader.aliasesJson);
-      return [leader.name, ...aliases].some((item) => item && focusText.includes(item));
+      const { nameTerms } = splitLeaderAliases(leader);
+      return nameTerms.some((item) => item && focusText.includes(item));
     });
 
     if (byNameOrAliasInFocus.length > 0) {
@@ -40,8 +55,8 @@ export async function resolveLeaders(regionId: string, text: string, focusTexts:
   }
 
   const byNameOrAliasInFullText = regionLeaders.filter((leader) => {
-    const aliases = parseJsonArray(leader.aliasesJson);
-    return [leader.name, ...aliases].some((item) => item && text.includes(item));
+    const { nameTerms } = splitLeaderAliases(leader);
+    return nameTerms.some((item) => item && text.includes(item));
   });
 
   if (byNameOrAliasInFullText.length > 0) {
@@ -50,8 +65,13 @@ export async function resolveLeaders(regionId: string, text: string, focusTexts:
 
   for (const focusText of focusTexts) {
     const byTitleInFocus = regionLeaders.filter((leader) => {
-      const aliases = parseJsonArray(leader.aliasesJson);
-      return [leader.officialTitle, leader.normalizedTitle, ...aliases].some((item) => item && focusText.includes(item));
+      const { specificTitleTerms, genericTitleTerms } = splitLeaderAliases(leader);
+
+      if (specificTitleTerms.some((item) => item && focusText.includes(item))) {
+        return true;
+      }
+
+      return TITLE_ACTION_HINT.test(focusText) && genericTitleTerms.some((item) => item && focusText.includes(item));
     });
 
     if (byTitleInFocus.length > 0) {
@@ -111,8 +131,27 @@ function inferEventDate(input: {
     cleanText(input.rawText).slice(0, 1200)
   ];
 
+  const stripPublishDateNoise = (candidate: string) => {
+    if (!input.publishTime) {
+      return candidate;
+    }
+
+    const year = input.publishTime.getUTCFullYear();
+    const month = input.publishTime.getUTCMonth() + 1;
+    const day = input.publishTime.getUTCDate();
+    const monthPadded = String(month).padStart(2, "0");
+    const dayPadded = String(day).padStart(2, "0");
+
+    return cleanText(
+      candidate
+        .replace(new RegExp(`${year}-${monthPadded}-${dayPadded}(?:\\s*\\d{2}:\\d{2})?`, "g"), " ")
+        .replace(new RegExp(`${year}年${month}月${day}日`, "g"), " ")
+        .replace(new RegExp(`${monthPadded}-${dayPadded}(?:\\s*\\d{2}:\\d{2})?`, "g"), " ")
+    );
+  };
+
   for (const candidate of candidates) {
-    const explicit = extractDateHint(candidate, input.publishTime);
+    const explicit = extractDateHint(stripPublishDateNoise(candidate), input.publishTime);
 
     if (explicit) {
       return explicit;

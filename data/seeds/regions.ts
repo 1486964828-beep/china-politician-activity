@@ -1,8 +1,10 @@
 export type RegionSeed = {
   code: string;
   name: string;
-  type: "PROVINCE" | "AUTONOMOUS_REGION" | "MUNICIPALITY";
+  level?: "PROVINCE" | "CITY";
+  type: "PROVINCE" | "AUTONOMOUS_REGION" | "MUNICIPALITY" | "CITY";
   govDomain: string;
+  parentCode?: string;
 };
 
 export const REGION_SEEDS: RegionSeed[] = [
@@ -29,6 +31,7 @@ export const REGION_SEEDS: RegionSeed[] = [
   { code: "hainan", name: "海南", type: "PROVINCE", govDomain: "hainan.gov.cn" },
   { code: "chongqing", name: "重庆", type: "MUNICIPALITY", govDomain: "cq.gov.cn" },
   { code: "sichuan", name: "四川", type: "PROVINCE", govDomain: "sc.gov.cn" },
+  { code: "chengdu", name: "成都", level: "CITY", type: "CITY", govDomain: "chengdu.gov.cn", parentCode: "sichuan" },
   { code: "guizhou", name: "贵州", type: "PROVINCE", govDomain: "guizhou.gov.cn" },
   { code: "yunnan", name: "云南", type: "PROVINCE", govDomain: "yn.gov.cn" },
   { code: "xizang", name: "西藏", type: "AUTONOMOUS_REGION", govDomain: "xizang.gov.cn" },
