@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Badge } from "@/components/badge";
 import type { StaticEvent } from "@/lib/static-data";
 import { credibilityLabels, eventTypeLabels, roleTypeLabels } from "@/lib/utils/labels";
+import { buildDisplaySummary, normalizeSourceTitle } from "@/lib/utils/presentation";
 
 export function EventTable({ events }: { events: StaticEvent[] }) {
   if (events.length === 0) {
@@ -22,6 +23,7 @@ export function EventTable({ events }: { events: StaticEvent[] }) {
             <th className="px-4 py-3">地区</th>
             <th className="px-4 py-3">领导</th>
             <th className="px-4 py-3">标准标题</th>
+            <th className="px-4 py-3">摘要</th>
             <th className="px-4 py-3">类型</th>
             <th className="px-4 py-3">来源</th>
           </tr>
@@ -29,6 +31,8 @@ export function EventTable({ events }: { events: StaticEvent[] }) {
         <tbody>
           {events.map((event) => {
             const primary = event.sources.find((item) => item.isPrimary) ?? event.sources[0];
+            const displayTitle = primary ? normalizeSourceTitle(primary.rawArticle.title) : event.normalizedTitle;
+            const displaySummary = primary ? buildDisplaySummary(event.summary ?? "", primary.rawArticle.title) : event.summary;
             return (
               <tr key={event.id} className="border-t border-slate-100 align-top">
                 <td className="px-4 py-4 text-sm text-slate-600">{event.eventDate.slice(0, 10)}</td>
@@ -48,9 +52,11 @@ export function EventTable({ events }: { events: StaticEvent[] }) {
                 </td>
                 <td className="px-4 py-4 text-sm">
                   <Link href={`/events/${event.id}`} className="font-medium text-ink underline-offset-4 hover:underline">
-                    {event.normalizedTitle}
+                    {displayTitle}
                   </Link>
-                  <p className="mt-2 max-w-xl text-slate-600">{event.summary}</p>
+                </td>
+                <td className="px-4 py-4 text-sm text-slate-600">
+                  <p className="max-w-xl leading-7">{displaySummary || "暂无正文摘要"}</p>
                 </td>
                 <td className="px-4 py-4 text-sm">
                   <Badge tone="green">{eventTypeLabels[event.eventType as keyof typeof eventTypeLabels]}</Badge>

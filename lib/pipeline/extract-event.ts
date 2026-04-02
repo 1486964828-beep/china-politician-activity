@@ -4,6 +4,7 @@ import { prisma } from "../prisma";
 import { extractDateHint, parseChineseDateHint } from "../utils/dates";
 import { sha1 } from "../utils/hash";
 import { parseJsonArray, stringifyJsonArray } from "../utils/json";
+import { buildDisplaySummary, cleanArticleBody, normalizeSourceTitle } from "../utils/presentation";
 import { cleanText, extractKeywords, splitSentences, summarize } from "../utils/text";
 
 const EVENT_TYPE_RULES: Array<{ type: EventType; keywords: string[] }> = [
@@ -20,18 +21,13 @@ const EVENT_TYPE_RULES: Array<{ type: EventType; keywords: string[] }> = [
   { type: "LIANGHUI", keywords: ["全国两会", "两会", "代表团", "全国人大", "全国政协", "审议政府工作报告"] }
 ];
 
-const GENERIC_TITLE_ALIASES = new Set(["书记", "省长", "市长", "主席", "党委书记", "自治区主席"]);
-const TITLE_ACTION_HINT = /(主持|召开|会见|调研|考察|出席|督导|检查|走访|前往|赴|率队|带队)/;
-
 function splitLeaderAliases(leader: { name: string; aliasesJson: string; officialTitle: string; normalizedTitle: string }) {
   const aliases = parseJsonArray(leader.aliasesJson).filter(Boolean);
-  const genericAliases = aliases.filter((item) => GENERIC_TITLE_ALIASES.has(item));
-  const specificAliases = aliases.filter((item) => !GENERIC_TITLE_ALIASES.has(item));
+  const specificAliases = aliases.filter((item) => item.length > 2);
 
   return {
     nameTerms: [leader.name, ...specificAliases],
-    specificTitleTerms: [leader.officialTitle, ...specificAliases],
-    genericTitleTerms: [leader.normalizedTitle, ...genericAliases].filter(Boolean)
+    specificTitleTerms: [leader.officialTitle, ...specificAliases]
   };
 }
 
@@ -65,13 +61,8 @@ export async function resolveLeaders(regionId: string, text: string, focusTexts:
 
   for (const focusText of focusTexts) {
     const byTitleInFocus = regionLeaders.filter((leader) => {
-      const { specificTitleTerms, genericTitleTerms } = splitLeaderAliases(leader);
-
-      if (specificTitleTerms.some((item) => item && focusText.includes(item))) {
-        return true;
-      }
-
-      return TITLE_ACTION_HINT.test(focusText) && genericTitleTerms.some((item) => item && focusText.includes(item));
+      const { specificTitleTerms } = splitLeaderAliases(leader);
+      return specificTitleTerms.some((item) => item && focusText.includes(item));
     });
 
     if (byTitleInFocus.length > 0) {
@@ -168,7 +159,11 @@ export function buildNormalizedTitle(input: {
   rawTitle: string;
 }) {
   const leaderText = input.leaders.map((item) => item.name).join("、") || "相关领导";
-  const rawTitle = cleanText(input.rawTitle);
+  const rawTitle = normalizeSourceTitle(input.rawTitle);
+
+  if (rawTitle.length > 0) {
+    return rawTitle;
+  }
 
   if (rawTitle.includes("调研") || rawTitle.includes("考察")) {
     return `${leaderText}${input.locationText ? `在${input.locationText}` : ""}调研`;
@@ -277,18 +272,19 @@ export async function extractEventDraft(rawArticleId: string) {
   }
 
   const fullText = cleanText(`${article.title} ${article.rawText}`);
+  const contentText = cleanArticleBody(article.rawText, article.title);
   const titleText = cleanText(article.title);
-  const leadText = cleanText(`${article.title} ${splitSentences(article.rawText).slice(0, 4).join("。")}`);
-  const leaders = await resolveLeaders(region.id, fullText, [titleText, leadText]);
+  const leadText = cleanText(`${article.title} ${splitSentences(contentText).slice(0, 4).join("。")}`);
+  const leaders = await resolveLeaders(region.id, `${titleText} ${contentText}`, [titleText, leadText]);
   const publishTime = article.publishTime ?? undefined;
   const eventDate = inferEventDate({
     title: article.title,
-    rawText: article.rawText,
+    rawText: contentText,
     publishTime
   });
   const eventType = classifyEventType(leadText);
   const locationText = inferLocation(leadText);
-  const keywordList = extractKeywords(`${article.title} ${summarize(article.rawText, 2)}`);
+  const keywordList = extractKeywords(`${article.title} ${summarize(contentText, 2)}`);
   const normalizedTitle = buildNormalizedTitle({
     leaders,
     eventType,
@@ -312,7 +308,7 @@ export async function extractEventDraft(rawArticleId: string) {
     locationText,
     keywordsJson: stringifyJsonArray(keywordList),
     normalizedTitle,
-    summary: summarize(article.rawText, 2),
+    summary: buildDisplaySummary(contentText, article.title, 2),
     confidenceScore,
     dedupKey: buildDedupKey({
       regionCode: region.code,

@@ -35,7 +35,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="rounded-3xl bg-clay px-4 py-3 text-sm text-slate-600">
-            演示样例当前覆盖北京、广东、浙江、湖北、四川的真实风格数据链路
+            演示样例当前覆盖北京、广东、浙江、湖北、四川，以及四川下的成都市市级样本
           </div>
         </div>
       </section>

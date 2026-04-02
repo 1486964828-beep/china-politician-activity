@@ -2,6 +2,7 @@ import { CredibilityLevel, EventType } from "@prisma/client";
 
 import { prisma } from "../prisma";
 import { withinDays } from "../utils/dates";
+import { buildDisplaySummary, normalizeSourceTitle } from "../utils/presentation";
 import { buildDedupKey } from "./extract-event";
 import { parseJsonArray, stringifyJsonArray } from "../utils/json";
 import { jaccardSimilarity, tokenize } from "../utils/text";
@@ -121,6 +122,14 @@ async function pickPrimarySource(eventId: string) {
   await prisma.eventSource.update({
     where: { id: best.id },
     data: { isPrimary: true }
+  });
+
+  await prisma.event.update({
+    where: { id: eventId },
+    data: {
+      normalizedTitle: normalizeSourceTitle(best.rawArticle.title),
+      summary: buildDisplaySummary(best.rawArticle.rawText, best.rawArticle.title, 2)
+    }
   });
 }
 

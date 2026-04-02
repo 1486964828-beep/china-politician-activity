@@ -5,6 +5,7 @@ import { Badge } from "@/components/badge";
 import { STATIC_EVENTS } from "@/lib/static-data";
 import { credibilityLabels, eventTypeLabels, roleTypeLabels } from "@/lib/utils/labels";
 import { parseJsonArray } from "@/lib/utils/json";
+import { buildDisplaySummary, normalizeSourceTitle } from "@/lib/utils/presentation";
 
 export function generateStaticParams() {
   return STATIC_EVENTS.map((event) => ({ id: event.id }));
@@ -22,13 +23,17 @@ export default async function EventDetailPage({
     notFound();
   }
 
+  const primary = event.sources.find((item) => item.isPrimary) ?? event.sources[0];
+  const displayTitle = primary ? normalizeSourceTitle(primary.rawArticle.title) : event.normalizedTitle;
+  const displaySummary = primary ? buildDisplaySummary(event.summary ?? "", primary.rawArticle.title, 3) : event.summary;
+
   return (
     <main className="mx-auto max-w-5xl px-4 py-8 md:px-8">
       <div className="rounded-[2rem] border border-line bg-white/90 p-6 shadow-soft">
         <Link href="/" className="text-sm text-slate-500 underline-offset-4 hover:underline">
           返回查询页
         </Link>
-        <h1 className="mt-4 text-3xl font-semibold text-ink">{event.normalizedTitle}</h1>
+        <h1 className="mt-4 text-3xl font-semibold text-ink">{displayTitle}</h1>
         <div className="mt-4 flex flex-wrap gap-2">
           <Badge tone="green">{eventTypeLabels[event.eventType as keyof typeof eventTypeLabels]}</Badge>
           <Badge tone="ink">{event.region.name}</Badge>
@@ -39,7 +44,7 @@ export default async function EventDetailPage({
           <div className="space-y-4">
             <section>
               <h2 className="text-sm font-medium text-slate-500">摘要</h2>
-              <p className="mt-2 text-base leading-8 text-slate-700">{event.summary ?? "暂无摘要"}</p>
+              <p className="mt-2 text-base leading-8 text-slate-700">{displaySummary ?? "暂无摘要"}</p>
             </section>
             <section>
               <h2 className="text-sm font-medium text-slate-500">涉及领导</h2>
